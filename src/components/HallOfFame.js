@@ -4,7 +4,7 @@ import SectionTitle from "./SectionTitle";
 const HallOfFame = () => {
   return (
     <section className="section" id="hallOfFame">
-      <SectionTitle>Hall of Fame</SectionTitle>
+      <SectionTitle sectionTitle="Hall of Fame"></SectionTitle>
       <div className="fameFlex">
         {hofConfig.map((seasonNum) => {
           const { id, season, src } = seasonNum;

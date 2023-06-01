@@ -1,15 +1,22 @@
 import styled from "styled-components";
+import CheckeredDivider from "./CheckeredDivider";
 
-const SectionTitle = styled.h3`
-  background-color: #fff;
-  color: #000 !important;
-  padding: 1% 1%;
-  width: 20rem;
+const StyledSectionTitle = styled.div`
   margin: auto;
-  border-radius: 3rem;
-  box-shadow: 0rem -0.3rem #cfcfcf;
   text-align: center;
-  margin-bottom: 3rem;
+  padding: 0.5rem;
 `;
+
+const SectionTitle = ({ sectionTitle }) => {
+  return (
+    <div className="sectionDiv">
+      <CheckeredDivider />
+      <StyledSectionTitle>
+        <h2>{sectionTitle}</h2>
+      </StyledSectionTitle>
+      <CheckeredDivider />
+    </div>
+  );
+};
 
 export default SectionTitle;

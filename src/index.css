@@ -98,7 +98,7 @@ p {
 /*  global classes */
 /* section */
 .section {
-  padding: 2.5rem 0;
+  padding: 1rem 0;
   scroll-margin-top: 4rem;
   border-bottom: 0.2rem solid var(--clr-white);
 }
@@ -106,6 +106,9 @@ p {
 .section-title span {
   color: var(--clr-white);
 }
+
+.sectionDiv {margin-top:1rem; margin-bottom:2rem;}
+
 
 /*
 =============== 
@@ -172,12 +175,13 @@ Footer
   justify-content: center;
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 .footer-link {
   color: var(--clr-white);
   text-transform: capitalize;
-  font-size: 1rem;
-  margin-right: 1rem;
+  font-size: 1.2rem;
+  padding:1rem;
   letter-spacing: var(--spacing);
   transition: var(--transition);
 }
@@ -331,8 +335,8 @@ Navbar
   .splide .splide__arrow--next {right:20%; top:45%;}
   .splide .splide__pagination {position: relative; margin: 0 0 2rem 0;}
   #gallery h2 {    
-    text-align: center;
-    margin-bottom: 2rem;
+    text-align: center;  
+    margin-bottom:0;  
   }
   #gallery p {
     color:var(--clr-white);
@@ -352,8 +356,8 @@ Navbar
     }
 
 
-  #hallOfFame h2 {color:var(--clr-white); margin:auto; text-align: center; margin-bottom:32px}
-  #hallOfFame img {margin:auto; margin-bottom: 64px;}
+  #hallOfFame h2 {color:var(--clr-white); margin:auto; text-align: center;}
+  #hallOfFame img {margin:auto; margin-top:32px; margin-bottom: 64px;}
   #hallOfFame .fameFlex .flexDiv {width:48%;}
   #hallOfFame .fameFlex {display: flex; flex-wrap: wrap; justify-content: space-between; width:80%; margin: auto;}
 
@@ -365,9 +369,12 @@ Navbar
   @media screen and (max-width: 1024px) {
   #hallOfFame .fameFlex .flexDiv {width:100%;}
   }
-
+  @media screen and (max-width: 800px) {
+  #hallOfFame .fameFlex {width:90%;}
+  }
   /* Video */
-  #pastStreams h2 {color:var(--clr-white); margin:auto; text-align: center; margin-bottom: 32px;}  
+  #pastStreams h2 {color:var(--clr-white); margin:auto; text-align: center;}  
+  #pastStreams .flexDiv h2 {margin-bottom:32px;}
   #pastStreams .flexDiv {margin-bottom: 64px;} 
   #pastStreams .videoContainer {
     position: relative;
@@ -388,9 +395,9 @@ Navbar
       padding-bottom:51%;
     }
     #pastStreams .videoContainer iframe {
-      width:90%;
+      width:95%;
       height:100%;
-      left: 1.2rem;
+      left: 0.7rem;
     }
 
   }

@@ -4,7 +4,7 @@ import Splider from "./Splider.js";
 const Gallery = () => {
   return (
     <section className="section" id="gallery">
-      <SectionTitle>Gallery</SectionTitle>
+      <SectionTitle sectionTitle="Gallery"></SectionTitle>
       <Splider />
     </section>
   );
