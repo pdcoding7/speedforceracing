@@ -9,7 +9,7 @@ const Standings = () => {
   return (
     <section className="section" id="standings">
       <div id="gp1Standings">
-        <SectionTitle>Standings</SectionTitle>
+        <SectionTitle sectionTitle="Standings"></SectionTitle>
         <DivisionTitle division="GP1" typeOf="Drivers Championship" />
         <table>
           <tr>
