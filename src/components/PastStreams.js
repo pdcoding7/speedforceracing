@@ -9,6 +9,11 @@ const StyledDiv = styled.div`
   width: 70%;
 `;
 
+const StyledDefaultButton = styled(DefaultButton)`
+  background-color: #000;
+  color: #fff;
+`;
+
 const PastStreams = () => {
   return (
     <section className="section" id="pastStreams">
@@ -26,9 +31,9 @@ const PastStreams = () => {
       })}
       <StyledDiv>
         <a href="https://www.youtube.com/@SpeedForceRacing">
-          <DefaultButton>
+          <StyledDefaultButton>
             Visit our YouTube channel for more <i class="fab fa-youtube"></i>
-          </DefaultButton>
+          </StyledDefaultButton>
         </a>
       </StyledDiv>
     </section>

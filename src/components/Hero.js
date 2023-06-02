@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="hero-banner">
         <img src={logo} className="nav-logo" alt="SpeedForce Racing" />
         <p>
-          Speed Force Racing has just finished our 13th season of quality,
+          Speed Force Racing have just finished our 13th season of quality,
           competitive league racing. Now recruiting for F1 23, all abilities are
           welcome.
         </p>

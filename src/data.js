@@ -145,9 +145,16 @@ export const hofConfig = [
 ];
 
 export const gp1Slider = [
-  { id: 1, imgPath: "/images/img-1.jpg", desc: "Image One - GP1" },
-  { id: 2, imgPath: "/images/img-2.jpg", desc: "Image Two - GP1" },
-  { id: 3, imgPath: "/images/img-3.jpg", desc: "Image Three - GP1" },
+  {
+    id: 1,
+    imgPath: "/images/img-1.jpg",
+    desc: "Submit your racing images on Discord to show here",
+  },
+  {
+    id: 2,
+    imgPath: "/images/img-2.jpg",
+    desc: "Submit your racing images on Discord to show here",
+  },
 ];
 
 export const gp2Slider = [
@@ -159,7 +166,7 @@ export const gp2Slider = [
   {
     id: 2,
     imgPath: "/images/img-2.jpg",
-    desc: "Image Two - GP2",
+    desc: "Submit your racing images on Discord to show here",
   },
 ];
 
