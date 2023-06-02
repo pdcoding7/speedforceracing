@@ -349,7 +349,9 @@ Navbar
   #hallOfFame .fameFlex .flexDiv {width:48%;}
   #hallOfFame .fameFlex {display: flex; flex-wrap: wrap; justify-content: space-between; width:80%; margin: auto;}
 
-  #hallOfFame .sectionDiv .fZUBal {  background: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%) 50% /
+  #hallOfFame .sectionDiv > :nth-child(1) {  background: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%) 50% /
+    20px 20px;}
+  #hallOfFame .sectionDiv > :nth-child(3) {  background: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%) 50% /
     20px 20px;}
 
   @media screen and (max-width: 1167px) {
@@ -381,7 +383,9 @@ Navbar
     height:100%;
   }
 
-  #pastStreams .sectionDiv .fZUBal {  background: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%) 50% /
+  #pastStreams .sectionDiv > :nth-child(1) {  background: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%) 50% /
+    20px 20px;}
+  #pastStreams .sectionDiv > :nth-child(3) {  background: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%) 50% /
     20px 20px;}
 
   @media screen and (max-width: 800px) {
