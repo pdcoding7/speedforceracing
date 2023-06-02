@@ -102,13 +102,10 @@ p {
   scroll-margin-top: 4rem;
   border-bottom: 0.2rem solid var(--clr-white);
 }
-
 .section-title span {
   color: var(--clr-white);
 }
-
-.sectionDiv {margin-top:1rem; margin-bottom:2rem;}
-
+.sectionDiv {margin-top:1rem; margin-bottom:3rem;}
 
 /*
 =============== 
@@ -152,7 +149,7 @@ Hero
 
   @media screen and (max-width: 800px) {
   .hero {
-    min-height: 80vh;
+    min-height: 88vh;
   }
   }
 
@@ -218,21 +215,6 @@ Navbar
 ===============
 */
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: var(--clr-black);
-  box-shadow: var(--dark-shadow);
-  z-index: 2;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  border-bottom: 0.2rem solid var(--clr-white);
-  border-top: 0.2rem solid var(--clr-white);
-  max-height: 4rem;
-}
 .nav-icons {
   display: none;
 }
@@ -344,6 +326,8 @@ Navbar
     padding-top: 2%;
   }
 
+  #gallery .imgDesc {width:70%; margin:auto;}
+
   @media screen and (max-width: 1200px) {
   #gallery .splide .splide__track {width:90%; margin: auto;}
   .splide .splide__arrow--prev {left:5%; top:45%;}
@@ -353,6 +337,7 @@ Navbar
   @media screen and (max-width: 750px) {
     .splide .splide__arrow--prev {display:none;}
     .splide .splide__arrow--next {display: none;}
+    #gallery .imgDesc {width:90%; margin:auto;}
     }
 
 
