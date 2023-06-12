@@ -388,7 +388,7 @@ Navbar
   #pastStreams .sectionDiv > :nth-child(3) {  background: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%) 50% /
     20px 20px;}
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
     #pastStreams .videoContainer {
       padding-bottom:51%;
     }
