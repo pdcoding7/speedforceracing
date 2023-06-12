@@ -670,7 +670,7 @@ export const standingsGP2Config = [
     second: "",
     third: "",
     fastest: "",
-    points: "",
+    points: "11",
   },
   {
     id: 12,
