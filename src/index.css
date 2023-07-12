@@ -515,7 +515,7 @@ h2.sectionHeader {margin-bottom:0;}
       @media screen and (max-width: 700px) {
         #standings .indivTable h5 {display: none;}
         #standings .indivTable img {width:50%;}
-        #standings .indivTable th {min-width: 3rem;}
+        #standings .indivTable th {min-width: 3.5rem;}
         #standings .indivTable .driverList {width:11rem;}
         #standings .indivTable .teamCol {width:8rem;}
         #standings table {width:90%;}
