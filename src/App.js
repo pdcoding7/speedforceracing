@@ -5,12 +5,14 @@ import Gallery from "./components/Gallery";
 import HallOfFame from "./components/HallOfFame";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
+import Calendar from "./components/Calendar";
 
 function App() {
   return (
     <>
       <Navbar></Navbar>
       <Hero />
+      <Calendar />
       <Standings />
       <PastStreams />
       <Gallery />

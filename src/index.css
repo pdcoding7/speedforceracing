@@ -102,8 +102,8 @@ p {
   scroll-margin-top: 4rem;
   border-bottom: 0.2rem solid var(--clr-white);
 }
-.section:nth-child(odd) {background-color:#000;}
-.section:nth-child(even) {background-color:#fff;}
+.section:nth-child(even) {background-color:#000;}
+.section:nth-child(odd) {background-color:#fff;}
 
 .section-title span {
   color: var(--clr-white);
@@ -222,7 +222,7 @@ Navbar
   display: none;
 }
 .nav-center {
-  max-width: 1170px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 .nav-header {
@@ -263,6 +263,9 @@ Navbar
   }
 
 }
+
+h2.sectionHeader {margin-bottom:0;}
+
   /* show links */
   .nav-links {
     height: auto;
@@ -399,10 +402,22 @@ Navbar
     }
 
   }
+
+  #calendar h2 {color:#000; margin:auto; text-align: center;}
+
+  #calendar .sectionDiv > :nth-child(1) {  background: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%) 50% /
+    20px 20px;}
+  #calendar .sectionDiv > :nth-child(3) {  background: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%) 50% /
+    20px 20px;}
+
+  #calendar .calendarImg {margin:auto; width: 40%; margin-bottom:2rem;}
+
+  @media screen and (max-width: 1000px) {
+  #calendar .calendarImg {margin:auto; width: 90%; margin-bottom:2rem;}
+  }
   
   /* Standings */
-
-  .typeTitle {color:var(--clr-white); width:80%; margin:auto; text-align: center; margin-bottom: 32px;}  
+  .typeTitle {color:var(--clr-white); width:80%; margin:auto; text-align: center; margin-bottom: 32px;}    
 
   #standings table {
     border: 2px solid var(--clr-white);
@@ -495,5 +510,14 @@ Navbar
         }
 
         #standings .driverList {width:7rem;}
+      }
+
+      @media screen and (max-width: 700px) {
+        #standings .indivTable h5 {display: none;}
+        #standings .indivTable img {width:80%;}
+        #standings .indivTable th {min-width: 3rem;}
+        #standings .indivTable .driverList {width:11rem;}
+        #standings .indivTable .teamCol {width:8rem;}
+        #standings table {width:90%;}
       }
 

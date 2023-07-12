@@ -12,7 +12,7 @@ const SectionTitle = ({ sectionTitle }) => {
     <div className="sectionDiv">
       <CheckeredDivider />
       <StyledSectionTitle>
-        <h2>{sectionTitle}</h2>
+        <h2 className="sectionHeader">{sectionTitle}</h2>
       </StyledSectionTitle>
       <CheckeredDivider />
     </div>

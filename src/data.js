@@ -13,6 +13,13 @@ export const SidebarData = [
     iconOpened: <RiIcons.RiArrowUpSFill />,
   },
   {
+    title: "Calendar",
+    path: "#calendar",
+    icon: <AiIcons.AiFillCalendar />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+  },
+  {
     title: "Standings - GP1",
     path: "#gp1Standings",
     icon: <IoIcons.IoIosPaper />,
@@ -57,10 +64,11 @@ export const SidebarData = [
 
 export const pageLinks = [
   { id: 1, href: "#home", text: "home" },
-  { id: 2, href: "#standings", text: "standings" },
-  { id: 3, href: "#pastStreams", text: "past streams" },
-  { id: 4, href: "#gallery", text: "gallery" },
-  { id: 5, href: "#hallOfFame", text: "hall of fame" },
+  { id: 2, href: "#calendar", text: "calendar" },
+  { id: 3, href: "#standings", text: "standings" },
+  { id: 4, href: "#pastStreams", text: "past streams" },
+  { id: 5, href: "#gallery", text: "gallery" },
+  { id: 6, href: "#hallOfFame", text: "hall of fame" },
 ];
 
 export const socialLinks = [
@@ -146,6 +154,14 @@ export const hofConfig = [
     id: 1,
     season: "1",
     src: "/images/hof-s1.png",
+  },
+];
+
+export const raceCalendar = [
+  {
+    id: 14,
+    season: "14",
+    src: "/images/s14-calender-new.jpg",
   },
 ];
 
