@@ -181,7 +181,7 @@ const Standings = () => {
               points,
             } = standings;
             return (
-              <tr key={id}>
+              <tr key={id} className="indivTable">
                 <td>
                   <p>{position}</p>
                 </td>
