@@ -456,7 +456,7 @@ h2.sectionHeader {margin-bottom:0;}
     #standings .teamCol {
       width: 13rem;
     }
-    #standings img {width: 65%; margin: auto;}
+    #standings img {width: 80%; margin: auto;}
     #standings .flexBox {display: flex; align-items: center;}
     #standings h5 {flex:2; font-size:1rem;}
     #standings h2 {margin-bottom: 0;}

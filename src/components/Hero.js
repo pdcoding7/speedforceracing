@@ -7,14 +7,11 @@ const Hero = () => {
       <div className="hero-banner">
         <img src={logo} className="nav-logo" alt="SpeedForce Racing" />
         <p>
-          Speed Force Racing have just finished our 13th season of quality,
-          competitive league racing. Now recruiting for F1 23, all abilities are
+          Speed Force Racing have entered our 14th season of quality,
+          competitive league racing. Still recruiting, all abilities are
           welcome.
         </p>
-        <p>
-          Join our Discord server for information on how to join. Recruiting
-          now!
-        </p>
+        <p>Join our Discord server for information on how to join.</p>
         <a href="https://discord.gg/8hB3MMfGy4">
           <DefaultButton>
             Join our Discord server <i class="fab fa-discord"></i>
