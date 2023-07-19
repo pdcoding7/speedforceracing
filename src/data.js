@@ -173,13 +173,18 @@ export const raceCalendar = [
 export const gp1Slider = [
   {
     id: 1,
-    imgPath: "/images/img-1.jpg",
-    desc: "Submit your racing images on Discord to show here",
+    imgPath: "/images/lights-out.jpg",
+    desc: "And it's lights out and away we go at Bahrain for the opening race of Season 14!",
   },
   {
     id: 2,
-    imgPath: "/images/img-2.jpg",
-    desc: "Submit your racing images on Discord to show here",
+    imgPath: "/images/kierannn.jpg",
+    desc: "The McLaren of Kierannnn_88 in the lead of the Bahrain GP, with his teammate in tow - Bahrain Rnd 1",
+  },
+  {
+    id: 3,
+    imgPath: "/images/alpha-line.jpg",
+    desc: "RogueSmithy dragging his car home as he runs out of fuel - Bahrain Rnd 1",
   },
 ];
 
