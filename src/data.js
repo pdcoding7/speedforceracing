@@ -160,13 +160,21 @@ export const hofConfig = [
 export const raceCalendar = [
   {
     id: 14,
-    season: "14",
+    season: "15",
     src: "/images/s14-calender-gp1.png",
   },
   {
     id: 15,
     season: "15",
     src: "/images/s14-calender-new.jpg",
+  },
+];
+
+export const raceResults = [
+  {
+    id: 1,
+    season: "18",
+    src: "/images/bahrain-result.png",
   },
 ];
 

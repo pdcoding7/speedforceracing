@@ -456,7 +456,7 @@ h2.sectionHeader {margin-bottom:0;}
     #standings .teamCol {
       width: 13rem;
     }
-    #standings img {width: 80%; margin: auto;}
+    #standings img {width: 100%; margin: auto;}
     #standings .flexBox {display: flex; align-items: center;}
     #standings h5 {flex:2; font-size:1rem;}
     #standings h2 {margin-bottom: 0;}
@@ -480,6 +480,8 @@ h2.sectionHeader {margin-bottom:0;}
 
     #standings .driverList {width:15rem;}
 
+    #standings .standingsImg {margin:auto; width: 65%; margin-bottom:4rem;}
+
     @media screen and (max-width: 1315px) {
       #standings table {
         width:90%;
@@ -500,7 +502,6 @@ h2.sectionHeader {margin-bottom:0;}
       }
 
       #standings .columnHide {display: none;}
-      #standings img {width:95%;}
 
       #standings th {
         min-width: 3rem;
@@ -519,5 +520,6 @@ h2.sectionHeader {margin-bottom:0;}
         #standings .indivTable .driverList {width:11rem;}
         #standings .indivTable .teamCol {width:8rem;}
         #standings table {width:90%;}
+        #standings .standingsImg {width: 100%;}
       }
 

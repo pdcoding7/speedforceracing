@@ -1,5 +1,6 @@
 import SectionTitle from "./SectionTitle.js";
 import { standingsConfig } from "../data";
+import { raceResults } from "../data";
 import { constructorsConfig } from "../data";
 import { standingsGP2Config } from "../data";
 import { constructorsGP2Config } from "../data";
@@ -10,8 +11,20 @@ const Standings = () => {
     <section className="section" id="standings">
       <div id="gp1Standings">
         <SectionTitle sectionTitle="Standings"></SectionTitle>
-        <DivisionTitle division="GP1" typeOf="Drivers Championship" />
-        <table>
+        <DivisionTitle division="GP2" typeOf="Race Results" />
+        <div className="fameFlex">
+          {raceResults.map((seasonNum) => {
+            const { id, season, src } = seasonNum;
+            return (
+              <div className="flexDiv">
+                <div className="standingsImg" key={id}>
+                  <img src={src} alt={`Season ${season} Race Results`} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        {/* <table>
           <tr>
             <th className="positionCol">
               <h4>Pos</h4>
@@ -73,9 +86,9 @@ const Standings = () => {
               </tr>
             );
           })}
-        </table>
-        <DivisionTitle division="GP1" typeOf="Constructors Championship" />
-        <table className="constructors">
+        </table> */}
+
+        {/* <table className="constructors">
           <tr>
             <th className="positionCol">
               <h4>Pos</h4>
@@ -132,15 +145,10 @@ const Standings = () => {
               </tr>
             );
           })}
-        </table>
+        </table> */}
       </div>
       <div id="gp2Standings">
-        <DivisionTitle
-          division="GP2"
-          typeOf="Drivers Championship"
-          id="gp2Standings"
-        />
-        <table>
+        {/* <table>
           <tr>
             <th className="positionCol">
               <h4>Pos</h4>
@@ -202,9 +210,9 @@ const Standings = () => {
               </tr>
             );
           })}
-        </table>
-        <DivisionTitle division="GP2" typeOf="Constructors Championship" />
-        <table className="constructors">
+        </table> */}
+        <DivisionTitle division="" typeOf="Standings to follow" />
+        {/* <table className="constructors">
           <tr>
             <th className="positionCol">
               <h4>Pos</h4>
@@ -261,7 +269,7 @@ const Standings = () => {
               </tr>
             );
           })}
-        </table>
+        </table> */}
       </div>
     </section>
   );
