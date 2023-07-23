@@ -204,13 +204,13 @@ export const gp2Slider = [
 export const streamConfig = [
   {
     id: 1,
-    src: "https://www.youtube.com/embed/rD31qHLteho",
-    title: "GP1 - Rnd 7 - USA",
+    src: "https://www.youtube.com/embed/tRQlfalSrzU",
+    title: "GP1 - Rnd 1 - Bahrain",
   },
   {
     id: 2,
-    src: "https://www.youtube.com/embed/oxG4WsnhrsI",
-    title: "GP2 - Rnd 7 - USA",
+    src: "https://www.youtube.com/embed/lgLg2Bhs5lU",
+    title: "GP2 - Rnd 1 - Bahrain",
   },
 ];
 
