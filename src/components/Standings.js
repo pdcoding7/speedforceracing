@@ -211,7 +211,7 @@ const Standings = () => {
             );
           })}
         </table> */}
-        <DivisionTitle division="" typeOf="Standings to follow" />
+
         {/* <table className="constructors">
           <tr>
             <th className="positionCol">
