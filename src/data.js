@@ -178,6 +178,22 @@ export const raceResults = [
   },
 ];
 
+export const raceResultsGp1 = [
+  {
+    id: 1,
+    season: "18",
+    src: "/images/div-1-results.png",
+  },
+];
+
+export const constructorsGraphicGp1 = [
+  {
+    id: 1,
+    season: "18",
+    src: "/images/div-1-constructors.png",
+  },
+];
+
 export const constructorsGraphic = [
   {
     id: 1,

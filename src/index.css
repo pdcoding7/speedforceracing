@@ -418,7 +418,7 @@ h2.sectionHeader {margin-bottom:0;}
   }
   
   /* Standings */
-  .typeTitle {color:var(--clr-white); width:80%; margin:auto; text-align: center; margin-bottom: 32px;}    
+  .typeTitle {color:var(--clr-white); width:80%; margin:auto; text-align: center; margin-bottom: 16px;}    
 
   #standings table {
     border: 2px solid var(--clr-white);
@@ -481,8 +481,8 @@ h2.sectionHeader {margin-bottom:0;}
 
     #standings .driverList {width:15rem;}
 
-    #standings .standingsImg {margin:auto; width: 65%; margin-bottom:4rem;}
-    #standings .constructorsImg {margin:auto; width: 30%; margin-bottom:4rem;}
+    #standings .standingsImg {margin:auto; width: 65%; margin-bottom:2.5rem;}
+    #standings .constructorsImg {margin:auto; width: 30%; margin-bottom:2.5rem;}
 
     @media screen and (max-width: 1315px) {
       #standings table {
