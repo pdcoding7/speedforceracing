@@ -10,7 +10,7 @@ const HallOfFame = () => {
           const { id, season, src } = seasonNum;
           return (
             <div className="flexDiv">
-              <div className="seasonHall" key={id}>
+              <div key={id}>
                 <h2>Season {season}</h2>
                 <img src={src} alt={`Season ${season} Champions`} />
               </div>

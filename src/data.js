@@ -178,6 +178,14 @@ export const raceResults = [
   },
 ];
 
+export const constructorsGraphic = [
+  {
+    id: 1,
+    season: "18",
+    src: "/images/gp2-standings.png",
+  },
+];
+
 export const gp1Slider = [
   {
     id: 1,

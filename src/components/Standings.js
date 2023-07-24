@@ -1,6 +1,7 @@
 import SectionTitle from "./SectionTitle.js";
 import { standingsConfig } from "../data";
 import { raceResults } from "../data";
+import { constructorsGraphic } from "../data";
 import { constructorsConfig } from "../data";
 import { standingsGP2Config } from "../data";
 import { constructorsGP2Config } from "../data";
@@ -11,14 +12,27 @@ const Standings = () => {
     <section className="section" id="standings">
       <div id="gp1Standings">
         <SectionTitle sectionTitle="Standings"></SectionTitle>
-        <DivisionTitle division="GP2" typeOf="" />
+        <DivisionTitle division="GP2" typeOf="Drivers Standings" />
         <div className="fameFlex">
           {raceResults.map((seasonNum) => {
             const { id, season, src } = seasonNum;
             return (
               <div className="flexDiv">
                 <div className="standingsImg" key={id}>
-                  <img src={src} alt={`Season ${season} Race Results`} />
+                  <img src={src} alt={`Season ${season}`} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <DivisionTitle division="GP2" typeOf="Constructors" />
+        <div className="fameFlex">
+          {constructorsGraphic.map((seasonNum) => {
+            const { id, season, src } = seasonNum;
+            return (
+              <div className="flexDiv">
+                <div className="constructorsImg" key={id}>
+                  <img src={src} alt={`Season ${season}`} />
                 </div>
               </div>
             );
