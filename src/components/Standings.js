@@ -14,7 +14,7 @@ const Standings = () => {
     <section className="section" id="standings">
       <div id="gp1Standings">
         <SectionTitle sectionTitle="Standings"></SectionTitle>
-        <DivisionTitle division="GP1" typeOf="Driver Standings" />
+        <DivisionTitle division="Div 1" typeOf="Driver Standings" />
         <div className="fameFlex">
           {raceResultsGp1.map((seasonNum) => {
             const { id, season, src } = seasonNum;
@@ -27,7 +27,7 @@ const Standings = () => {
             );
           })}
         </div>
-        <DivisionTitle division="GP1" typeOf="Constructors" />
+        <DivisionTitle division="Div 1" typeOf="Constructors" />
         <div className="fameFlex">
           {constructorsGraphicGp1.map((seasonNum) => {
             const { id, season, src } = seasonNum;
@@ -165,7 +165,7 @@ const Standings = () => {
         </table> */}
       </div>
       <div id="gp2Standings">
-        <DivisionTitle division="GP2" typeOf="Driver Standings" />
+        <DivisionTitle division="Div 2" typeOf="Driver Standings" />
         <div className="fameFlex">
           {raceResults.map((seasonNum) => {
             const { id, season, src } = seasonNum;
@@ -178,7 +178,7 @@ const Standings = () => {
             );
           })}
         </div>
-        <DivisionTitle division="GP2" typeOf="Constructors" />
+        <DivisionTitle division="Div 2" typeOf="Constructors" />
         <div className="fameFlex">
           {constructorsGraphic.map((seasonNum) => {
             const { id, season, src } = seasonNum;

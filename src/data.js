@@ -20,7 +20,7 @@ export const SidebarData = [
     iconOpened: <RiIcons.RiArrowUpSFill />,
   },
   {
-    title: "Standings - GP1",
+    title: "Standings - Div 1",
     path: "#gp1Standings",
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -39,7 +39,7 @@ export const SidebarData = [
     // ],
   },
   {
-    title: "Standings - GP2",
+    title: "Standings - Div 2",
     path: "#gp2Standings",
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -224,7 +224,7 @@ export const gp2Slider = [
   {
     id: 1,
     imgPath: "/images/img-ollie.jpg",
-    desc: "SFR-OliverF1 and Vernex_EU batting it out at turn 5 of Portimao, in the penultimate race of the GP2 season",
+    desc: "SFR-OliverF1 and Vernex_EU batting it out at turn 5 of Portimao, in the penultimate race of the Div 2 season",
   },
   {
     id: 2,
@@ -237,22 +237,22 @@ export const streamConfig = [
   {
     id: 1,
     src: "https://www.youtube.com/embed/tRQlfalSrzU",
-    title: "GP1 - Rnd 1 - Bahrain",
+    title: "Div 1 - Rnd 1 - Bahrain",
   },
   {
     id: 2,
     src: "https://www.youtube.com/embed/hN6x7S7DRys",
-    title: "GP1 - Rnd 2 - Saudi Arabia",
+    title: "Div 1 - Rnd 2 - Saudi Arabia",
   },
   {
     id: 3,
     src: "https://www.youtube.com/embed/lgLg2Bhs5lU",
-    title: "GP2 - Rnd 1 - Bahrain",
+    title: "Div 2 - Rnd 1 - Bahrain",
   },
   {
     id: 4,
     src: "https://www.youtube.com/embed/EgRkIBC6eWU",
-    title: "GP2 - Rnd 2 - Saudi Arabia",
+    title: "Div 2 - Rnd 2 - Saudi Arabia",
   },
 ];
 
