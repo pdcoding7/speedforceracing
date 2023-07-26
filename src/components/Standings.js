@@ -1,8 +1,8 @@
 import SectionTitle from "./SectionTitle.js";
 import { standingsConfig } from "../data";
-import { raceResults } from "../data";
+import { raceResultsDiv2 } from "../data";
 import { constructorsGraphic } from "../data";
-import { raceResultsGp1 } from "../data";
+import { raceResultsDiv1 } from "../data";
 import { constructorsGraphicGp1 } from "../data";
 import { constructorsConfig } from "../data";
 import { standingsGP2Config } from "../data";
@@ -14,9 +14,9 @@ const Standings = () => {
     <section className="section" id="standings">
       <div id="gp1Standings">
         <SectionTitle sectionTitle="Standings"></SectionTitle>
-        <DivisionTitle division="Div 1" typeOf="Driver Standings" />
+        <DivisionTitle division="Div 1" typeOf="- Race Result - Rnd 1" />
         <div className="fameFlex">
-          {raceResultsGp1.map((seasonNum) => {
+          {raceResultsDiv1.map((seasonNum) => {
             const { id, season, src } = seasonNum;
             return (
               <div className="flexDiv">
@@ -27,21 +27,9 @@ const Standings = () => {
             );
           })}
         </div>
-        <DivisionTitle division="Div 1" typeOf="Constructors" />
-        <div className="fameFlex">
-          {constructorsGraphicGp1.map((seasonNum) => {
-            const { id, season, src } = seasonNum;
-            return (
-              <div className="flexDiv">
-                <div className="constructorsImg" key={id}>
-                  <img src={src} alt={`Season ${season}`} />
-                </div>
-              </div>
-            );
-          })}
-        </div>
 
-        {/* <table>
+        <DivisionTitle division="Div 1" typeOf="- Driver Standings" />
+        <table>
           <tr>
             <th className="positionCol">
               <h4>Pos</h4>
@@ -103,7 +91,21 @@ const Standings = () => {
               </tr>
             );
           })}
-        </table> */}
+        </table>
+
+        <DivisionTitle division="Div 1" typeOf="- Constructors Championship" />
+        <div className="fameFlex">
+          {constructorsGraphicGp1.map((seasonNum) => {
+            const { id, season, src } = seasonNum;
+            return (
+              <div className="flexDiv">
+                <div className="constructorsImg" key={id}>
+                  <img src={src} alt={`Season ${season}`} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
         {/* <table className="constructors">
           <tr>
@@ -165,9 +167,9 @@ const Standings = () => {
         </table> */}
       </div>
       <div id="gp2Standings">
-        <DivisionTitle division="Div 2" typeOf="Driver Standings" />
+        <DivisionTitle division="Div 2" typeOf="- Race Result - Rnd 2" />
         <div className="fameFlex">
-          {raceResults.map((seasonNum) => {
+          {raceResultsDiv2.map((seasonNum) => {
             const { id, season, src } = seasonNum;
             return (
               <div className="flexDiv">
@@ -178,21 +180,8 @@ const Standings = () => {
             );
           })}
         </div>
-        <DivisionTitle division="Div 2" typeOf="Constructors" />
-        <div className="fameFlex">
-          {constructorsGraphic.map((seasonNum) => {
-            const { id, season, src } = seasonNum;
-            return (
-              <div className="flexDiv">
-                <div className="constructorsImg" key={id}>
-                  <img src={src} alt={`Season ${season}`} />
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* <table>
+        <DivisionTitle division="Div 2" typeOf="- Driver Standings" />
+        <table>
           <tr>
             <th className="positionCol">
               <h4>Pos</h4>
@@ -254,7 +243,21 @@ const Standings = () => {
               </tr>
             );
           })}
-        </table> */}
+        </table>
+
+        <DivisionTitle division="Div 2" typeOf="Constructors Championship" />
+        <div className="fameFlex">
+          {constructorsGraphic.map((seasonNum) => {
+            const { id, season, src } = seasonNum;
+            return (
+              <div className="flexDiv">
+                <div className="constructorsImg" key={id}>
+                  <img src={src} alt={`Season ${season}`} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
         {/* <table className="constructors">
           <tr>
