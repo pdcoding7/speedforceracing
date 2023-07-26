@@ -6,7 +6,7 @@ import DivisionTitle from "./DivisionTitle";
 const Splider = () => {
   return (
     <>
-      <DivisionTitle division="GP1" />
+      <DivisionTitle division="Div 1" />
       <Splide options={{ rewind: true, gap: "1rem" }}>
         {gp1Slider.map((slide) => {
           const { id, imgPath, desc } = slide;
@@ -22,7 +22,7 @@ const Splider = () => {
           );
         })}
       </Splide>
-      <DivisionTitle division="GP2" />
+      <DivisionTitle division="Div 2" />
       <Splide options={{ rewind: true, gap: "1rem" }}>
         {gp2Slider.map((slide) => {
           const { id, imgPath, desc } = slide;
