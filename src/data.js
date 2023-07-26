@@ -241,8 +241,18 @@ export const streamConfig = [
   },
   {
     id: 2,
+    src: "https://www.youtube.com/embed/hN6x7S7DRys",
+    title: "GP1 - Rnd 2 - Saudi Arabia",
+  },
+  {
+    id: 3,
     src: "https://www.youtube.com/embed/lgLg2Bhs5lU",
     title: "GP2 - Rnd 1 - Bahrain",
+  },
+  {
+    id: 4,
+    src: "https://www.youtube.com/embed/EgRkIBC6eWU",
+    title: "GP2 - Rnd 2 - Saudi Arabia",
   },
 ];
 
