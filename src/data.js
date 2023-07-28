@@ -174,7 +174,7 @@ export const raceResultsDiv1 = [
   {
     id: 1,
     season: "18",
-    src: "/images/div-1-results.png",
+    src: "/images/race-results-gp-1-rnd-2.png",
   },
 ];
 
@@ -190,7 +190,7 @@ export const constructorsGraphicGp1 = [
   {
     id: 1,
     season: "18",
-    src: "/images/div-1-constructors.png",
+    src: "/images/div-1-constructors-rnd-2.png",
   },
 ];
 

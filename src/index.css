@@ -478,8 +478,8 @@ h2.sectionHeader {margin-bottom:0;}
       margin: auto;
       font-weight: 600;
       color:var(--clr-white);
-      font-size:12px;
-      line-height: 30px;;
+      font-size:14px;
+      line-height: 28px;;
     }
     #standings .fastestCol {
       background-color:#684bc8;

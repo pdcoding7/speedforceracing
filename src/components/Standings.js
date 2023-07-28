@@ -14,7 +14,7 @@ const Standings = () => {
     <section className="section" id="standings">
       <div id="gp1Standings">
         <SectionTitle sectionTitle="Standings"></SectionTitle>
-        <DivisionTitle division="Div 1" typeOf="- Race Result - Rnd 1" />
+        <DivisionTitle division="Div 1" typeOf="- Race Result - Rnd 2" />
         <div className="fameFlex">
           {raceResultsDiv1.map((seasonNum) => {
             const { id, season, src } = seasonNum;
