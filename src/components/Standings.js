@@ -61,7 +61,6 @@ const Standings = () => {
               id,
               position,
               name,
-              team,
               teamBadge,
               wins,
               second,
@@ -77,7 +76,6 @@ const Standings = () => {
                 <td>{name}</td>
                 <td>
                   <div className="flexBox">
-                    <h5>{team}</h5>
                     <div class="teamImg">
                       <img src={teamBadge} alt="" />
                     </div>
@@ -213,7 +211,6 @@ const Standings = () => {
               id,
               position,
               name,
-              team,
               teamBadge,
               wins,
               second,
@@ -229,7 +226,6 @@ const Standings = () => {
                 <td>{name}</td>
                 <td>
                   <div className="flexBox">
-                    <h5>{team}</h5>
                     <div class="teamImg">
                       <img src={teamBadge} alt="" />
                     </div>

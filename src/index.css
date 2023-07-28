@@ -437,7 +437,7 @@ h2.sectionHeader {margin-bottom:0;}
 
   #standings th {
     background-color:var(--clr-black);
-    min-width: 2rem;
+    min-width: 1.8rem;
     }
   #standings th>h4 {
     margin: 2% 0% 4% 0%;
@@ -459,15 +459,18 @@ h2.sectionHeader {margin-bottom:0;}
       width:12%;
     }
     #standings .teamCol {
-      width: 13rem;
+      width: 6rem;
     }
-    #standings img {width: 100%; margin: auto;}
+  
+    #standings img {width:100%; margin: auto;}
+
+    #standings .teamImg img {width:75%;}
     #standings .flexBox {display: flex; align-items: center;}
     #standings h5 {flex:2; font-size:1rem;}
     #standings h2 {margin-bottom: 0;}
     #standings .teamImg {flex:1;}
     #standings p {
-      border-radius: 3rem;
+      border-radius: 20px;
       background-color: var(--clr-black);
       padding: 5% 0%;
       margin-bottom: 0;
@@ -475,6 +478,8 @@ h2.sectionHeader {margin-bottom:0;}
       margin: auto;
       font-weight: 600;
       color:var(--clr-white);
+      font-size:12px;
+      line-height: 30px;;
     }
     #standings .fastestCol {
       background-color:#684bc8;
