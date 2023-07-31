@@ -161,12 +161,12 @@ export const raceCalendar = [
   {
     id: 14,
     season: "15",
-    src: "/images/s14-calender-gp1.png",
+    src: "/images/s14-calender-div-1.png",
   },
   {
     id: 15,
     season: "15",
-    src: "/images/s14-calender-new.jpg",
+    src: "/images/s14-calender-div-2.png",
   },
 ];
 
@@ -237,7 +237,7 @@ export const streamConfig = [
   {
     id: 1,
     src: "https://www.youtube.com/embed/tRQlfalSrzU",
-    title: "Div 1 - Rnd 1 - Bahrain",
+    title: "Div 1 - Rnd 2 - Saudi Arabia",
   },
   {
     id: 2,
