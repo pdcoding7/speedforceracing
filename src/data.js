@@ -229,7 +229,7 @@ export const gp2Slider = [
 	{
 		id: 2,
 		imgPath: "/images/img-bossy-3.jpg",
-		desc: "SFR-BossyGaming chasing down SFR-NFSHW as the track dreis up. Australia Rnd 2. ",
+		desc: "SFR-BossyGaming chasing down SFR-NFSHW as the track dries up in Australia, Rnd 2. ",
 	},
 	{
 		id: 3,
