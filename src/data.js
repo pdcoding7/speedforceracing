@@ -256,13 +256,23 @@ export const streamConfig = [
 	},
 	{
 		id: 3,
+		src: "https://www.youtube.com/embed/LZyi-layqX0",
+		title: "Div 1 - Rnd 3 - Australia",
+	},
+	{
+		id: 4,
 		src: "https://www.youtube.com/embed/lgLg2Bhs5lU",
 		title: "Div 2 - Rnd 1 - Bahrain",
 	},
 	{
-		id: 4,
+		id: 5,
 		src: "https://www.youtube.com/embed/EgRkIBC6eWU",
 		title: "Div 2 - Rnd 2 - Saudi Arabia",
+	},
+	{
+		id: 6,
+		src: "https://www.youtube.com/embed/lQfWeyj3lDI",
+		title: "Div 2 - Rnd 3 - Australia",
 	},
 ];
 
