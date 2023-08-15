@@ -246,41 +246,11 @@ export const gp2Slider = [
 export const streamConfig = [
 	{
 		id: 1,
-		src: "https://www.youtube.com/embed/tRQlfalSrzU",
-		title: "Div 1 - Rnd 1 - Bahrain",
-	},
-	{
-		id: 2,
-		src: "https://www.youtube.com/embed/hN6x7S7DRys",
-		title: "Div 1 - Rnd 2 - Saudi Arabia",
-	},
-	{
-		id: 3,
-		src: "https://www.youtube.com/embed/LZyi-layqX0",
-		title: "Div 1 - Rnd 3 - Australia",
-	},
-	{
-		id: 4,
 		src: "https://www.youtube.com/embed/phROYoCLHjs",
 		title: "Div 1 - Rnd 4 - Baku (Part 2 on Channel)",
 	},
 	{
-		id: 5,
-		src: "https://www.youtube.com/embed/lgLg2Bhs5lU",
-		title: "Div 2 - Rnd 1 - Bahrain",
-	},
-	{
-		id: 6,
-		src: "https://www.youtube.com/embed/EgRkIBC6eWU",
-		title: "Div 2 - Rnd 2 - Saudi Arabia",
-	},
-	{
-		id: 7,
-		src: "https://www.youtube.com/embed/lQfWeyj3lDI",
-		title: "Div 2 - Rnd 3 - Australia",
-	},
-	{
-		id: 8,
+		id: 2,
 		src: "https://www.youtube.com/embed/VI-l1w_lReE",
 		title: "Div 2 - Rnd 4 - Baku",
 	},
