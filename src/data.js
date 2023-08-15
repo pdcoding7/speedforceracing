@@ -247,7 +247,7 @@ export const streamConfig = [
 	{
 		id: 1,
 		src: "https://www.youtube.com/embed/phROYoCLHjs",
-		title: "Div 1 - Rnd 4 - Baku (Part 2 on Channel)",
+		title: "Div 1 - Rnd 4 - Baku (Part 2 on YT Channel)",
 	},
 	{
 		id: 2,
