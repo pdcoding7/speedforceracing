@@ -149,7 +149,7 @@ const Standings = () => {
         </table> */}
 			</div>
 			<div id="gp2Standings">
-				<DivisionTitle division="Div 2" typeOf="- Race Result - Rnd 2" />
+				<DivisionTitle division="Div 2" typeOf="- Race Result" />
 				<div className="fameFlex">
 					{raceResultsDiv2.map((seasonNum) => {
 						const { id, season, src } = seasonNum;
