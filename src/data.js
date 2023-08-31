@@ -190,7 +190,7 @@ export const constructorsGraphicGp1 = [
 	{
 		id: 1,
 		season: "18",
-		src: "/images/div-1-constructors-rnd-6.png",
+		src: "/images/div-1-constructors-rnd-7.png",
 	},
 ];
 
@@ -198,7 +198,7 @@ export const constructorsGraphic = [
 	{
 		id: 1,
 		season: "18",
-		src: "/images/div-2-constructors-rnd-6.png",
+		src: "/images/div-2-constructors-rnd-7.png",
 	},
 ];
 
@@ -246,7 +246,7 @@ export const gp2Slider = [
 export const streamConfig = [
 	{
 		id: 1,
-		src: "https://www.youtube.com/embed/qbIisxsJhM?si=N6y6UoXQCVoHwGJv",
+		src: "https://www.youtube.com/embed/GqbIisxsJhM?si=zG2kP-PwqYUkHSng",
 		title: "Div 1 - Rnd 7 - Monaco",
 	},
 	{
