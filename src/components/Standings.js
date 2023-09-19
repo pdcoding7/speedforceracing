@@ -5,7 +5,9 @@ import { constructorsGraphic } from "../data";
 import { raceResultsDiv1 } from "../data";
 import { constructorsGraphicGp1 } from "../data";
 import { standingsGP2Config } from "../data";
+import { standingsRealisticConfig } from "../data";
 import DivisionTitle from "./DivisionTitle.js";
+// import { constructorsAllGraphic } from "../data";
 
 const Standings = () => {
 	return (
@@ -284,6 +286,67 @@ const Standings = () => {
           })}
         </table> */}
 			</div>
+
+			<div id="rpStandings">
+				<DivisionTitle division="RP" typeOf="- Driver Standings" />
+				<table>
+					<tr>
+						<th className="positionCol">
+							<h4>Pos</h4>
+						</th>
+						<th className="driverList">
+							<h4>Driver</h4>
+						</th>
+						<th className="columnHide">
+							<h4>1st</h4>
+						</th>
+						<th className="columnHide">
+							<h4>Pod</h4>
+						</th>
+						<th className="columnHide">
+							<h4>FL</h4>
+						</th>
+						<th className="columnHide">
+							<h4>Pole</h4>
+						</th>
+						<th>
+							<h4>Points</h4>
+						</th>
+					</tr>
+					{standingsRealisticConfig.map((standings) => {
+						const { id, position, name, wins, podiums, fastest, pole, points } = standings;
+						return (
+							<tr key={id} className="indivTable">
+								<td>
+									<p>{position}</p>
+								</td>
+								<td>{name}</td>
+								<td className="columnHide">{wins}</td>
+								<td className="columnHide">{podiums}</td>
+								<td className="fastestCol columnHide">{fastest}</td>
+								<td className="poleCol columnHide">{pole}</td>
+								<td>{points}</td>
+							</tr>
+						);
+					})}
+				</table>
+			</div>
+
+			{/* <div id="crossDivStandings">
+				<DivisionTitle division="Cross Div" typeOf="Constructors" />
+				<div className="fameFlex">
+					{constructorsAllGraphic.map((seasonNum) => {
+						const { id, season, src } = seasonNum;
+						return (
+							<div className="flexDiv">
+								<div className="constructorsImg" key={id}>
+									<img src={src} alt={`Season ${season}`} />
+								</div>
+							</div>
+						);
+					})}
+				</div>
+			</div> */}
 		</section>
 	);
 };

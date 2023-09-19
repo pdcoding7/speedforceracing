@@ -488,6 +488,12 @@ h2.sectionHeader {margin-bottom:0;}
       width:6%;
     }
 
+    #standings .poleCol {
+      color:var(--clr-white);
+      border-radius: 10%;
+      width:6%;
+    }
+
     #standings .driverList {width:15rem;}
     #standings .standingsImg {margin:auto; width: 65%; margin-bottom:3rem;}
     #standings .constructorsImg {margin:auto; width: 30%; margin-bottom:3rem;}
