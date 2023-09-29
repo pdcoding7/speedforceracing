@@ -102,8 +102,8 @@ const Standings = () => {
 						<th className="teamCol">
 							<h4>Team</h4>
 						</th>
-						<th className="blankCol"></th>
-						<th className="columnHide">
+						<th className="blankCol columnHide"></th>
+						<th>
 							<h4>Wins</h4>
 						</th>
 						<th>
@@ -124,7 +124,7 @@ const Standings = () => {
 										</div>
 									</div>
 								</td>
-								<td className="blankCol">
+								<td className="blankCol columnHide">
 									<h3>{team}</h3>
 								</td>
 								<td>{wins}</td>
@@ -219,8 +219,8 @@ const Standings = () => {
 						<th className="teamCol">
 							<h4>Team</h4>
 						</th>
-						<th className="blankCol"></th>
-						<th className="columnHide">
+						<th className="blankCol columnHide"></th>
+						<th>
 							<h4>Wins</h4>
 						</th>
 						<th>
@@ -241,7 +241,7 @@ const Standings = () => {
 										</div>
 									</div>
 								</td>
-								<td className="blankCol">
+								<td className="blankCol columnHide">
 									<h3>{team}</h3>
 								</td>
 								<td>{wins}</td>
@@ -320,8 +320,8 @@ const Standings = () => {
 						<th className="teamCol">
 							<h4>Team</h4>
 						</th>
-						<th className="blankCol"></th>
-						<th className="columnHide">
+						<th className="blankCol columnHide"></th>
+						<th>
 							<h4>Div 1</h4>
 						</th>
 						<th>
@@ -345,7 +345,7 @@ const Standings = () => {
 										</div>
 									</div>
 								</td>
-								<td className="blankCol">
+								<td className="blankCol columnHide">
 									<h3>{team}</h3>
 								</td>
 								<td>{div1}</td>
