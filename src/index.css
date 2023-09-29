@@ -461,6 +461,14 @@ h2.sectionHeader {margin-bottom:0;}
     #standings .teamCol {
       width: 6rem;
     }
+    #standings .blankCol {
+      width:16vw;
+    }
+    #standings td.blankCol h3 {
+      color: #000;
+      margin-bottom:0;
+      letter-spacing: normal;
+    }
   
     #standings img {width:100%; margin: auto;}
 
