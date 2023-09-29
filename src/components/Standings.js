@@ -262,13 +262,13 @@ const Standings = () => {
 						<th className="driverList">
 							<h4>Driver</h4>
 						</th>
-						<th className="columnHide">
+						<th>
 							<h4>1st</h4>
 						</th>
 						<th className="columnHide">
 							<h4>Pod</h4>
 						</th>
-						<th className="columnHide">
+						<th>
 							<h4>FL</h4>
 						</th>
 						<th className="columnHide">
@@ -286,9 +286,9 @@ const Standings = () => {
 									<p>{position}</p>
 								</td>
 								<td>{name}</td>
-								<td className="columnHide">{wins}</td>
+								<td>{wins}</td>
 								<td className="columnHide">{podiums}</td>
-								<td className="fastestCol columnHide">{fastest}</td>
+								<td className="fastestCol">{fastest}</td>
 								<td className="poleCol columnHide">{pole}</td>
 								<td>{points}</td>
 							</tr>
