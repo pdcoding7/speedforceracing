@@ -197,7 +197,7 @@ const Standings = () => {
 					})}
 				</table>
 
-				<DivisionTitle division="Cross Div" typeOf="Constructors Championship" />
+				<DivisionTitle division="Div 2" typeOf="Constructors Championship" />
 				{/* <div className="fameFlex">
 					{constructorsGraphic.map((seasonNum) => {
 						const { id, season, src } = seasonNum;
