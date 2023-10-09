@@ -34,9 +34,7 @@ const Standings = () => {
 				<DivisionTitle division="Div 1" typeOf="- Driver Standings" />
 				<table>
 					<tr>
-						<th className="positionCol">
-							<h4>Pos</h4>
-						</th>
+						<th className="positionCol"></th>
 						<th className="driverList">
 							<h4>Driver</h4>
 						</th>
@@ -96,9 +94,7 @@ const Standings = () => {
 
 				<table className="constructors">
 					<tr>
-						<th className="positionCol">
-							<h4>Pos</h4>
-						</th>
+						<th className="positionCol"></th>
 						<th className="teamCol">
 							<h4>Team</h4>
 						</th>
@@ -151,9 +147,7 @@ const Standings = () => {
 				<DivisionTitle division="Div 2" typeOf="- Driver Standings" />
 				<table>
 					<tr>
-						<th className="positionCol">
-							<h4>Pos</h4>
-						</th>
+						<th className="positionCol"></th>
 						<th className="driverList">
 							<h4>Driver</h4>
 						</th>
@@ -213,9 +207,7 @@ const Standings = () => {
 
 				<table className="constructors">
 					<tr>
-						<th className="positionCol">
-							<h4>Pos</h4>
-						</th>
+						<th className="positionCol"></th>
 						<th className="teamCol">
 							<h4>Team</h4>
 						</th>
@@ -256,9 +248,7 @@ const Standings = () => {
 				<DivisionTitle division="RP" typeOf="- Driver Standings" />
 				<table>
 					<tr>
-						<th className="positionCol">
-							<h4>Pos</h4>
-						</th>
+						<th className="positionCol"></th>
 						<th className="driverList">
 							<h4>Driver</h4>
 						</th>
@@ -314,9 +304,7 @@ const Standings = () => {
 
 				<table className="constructors">
 					<tr>
-						<th className="positionCol">
-							<h4>Pos</h4>
-						</th>
+						<th className="positionCol"></th>
 						<th className="teamCol">
 							<h4>Team</h4>
 						</th>
