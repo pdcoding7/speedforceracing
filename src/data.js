@@ -297,7 +297,7 @@ export const standingsConfig = [
 		team: "Mercedes",
 		teamBadge: "/images/team-merc.png",
 		wins: "4",
-		podiums: "1",
+		podiums: "10",
 		fastest: "2",
 		points: "251",
 	},
