@@ -442,6 +442,7 @@ h2.sectionHeader {margin-bottom:0;}
   #standings th>h4 {
     margin: 2% 0% 4% 0%;
     color:var(--clr-white);
+    font-weight: bold;
     }
     
   #standings td {
