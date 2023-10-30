@@ -244,7 +244,7 @@ const Standings = () => {
 				</table>
 			</div>
 
-			<div id="rpStandings">
+			{/* <div id="rpStandings">
 				<DivisionTitle division="RP" typeOf="- Driver Standings" />
 				<table>
 					<tr>
@@ -285,7 +285,7 @@ const Standings = () => {
 						);
 					})}
 				</table>
-			</div>
+			</div> */}
 
 			<div id="crossDivStandings">
 				<DivisionTitle division="Cross Div" typeOf="Constructors Championship" />
