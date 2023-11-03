@@ -268,13 +268,13 @@ export const gp2Slider = [
 export const streamConfig = [
 	{
 		id: 1,
-		src: "https://www.youtube.com/embed/OqC2eG2n0gU?si=_LywB0tNgFy0w-4M",
-		title: "Div 1 - Rnd 15 - Monza",
+		src: "https://www.youtube.com/embed/Vxu1YJJJl7Y?si=hdQNF2HdY8r8yNbD",
+		title: "Div 1 - Rnd 16 - Singapore",
 	},
 	{
 		id: 2,
-		src: "https://www.youtube.com/embed/9UVDso7CrTY?si=VgRMo4ITKryD6FU7",
-		title: "Div 2 - Rnd 15 - Monza",
+		src: "https://www.youtube.com/embed/LdhEmYqzcM0?si=d3v4D_hUMC0TksnB",
+		title: "Div 2 - Rnd 16 - Singapore",
 	},
 ];
 
