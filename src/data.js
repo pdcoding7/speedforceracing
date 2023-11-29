@@ -268,13 +268,13 @@ export const gp2Slider = [
 export const streamConfig = [
 	{
 		id: 1,
-		src: "https://www.youtube.com/embed/vra-mpetHJY?si=h1wEmqlvv2FOHE9U",
-		title: "Div 1 - Rnd 18 - Qatar",
+		src: "https://www.youtube.com/embed/A0DERIivpN4?si=QmH00IPm2vFuCZ2r",
+		title: "Div 1 - Rnd 20 - Mexico",
 	},
 	{
 		id: 2,
-		src: "https://www.youtube.com/embed/q0mrN8xFwbY?si=XA6vj1iNu8yExVm4",
-		title: "Div 2 - Rnd 18 - Qatar",
+		src: "https://www.youtube.com/embed/bLzIUhk5m2I?si=1G4sLJQxB9BKsSMm",
+		title: "Div 2 - Rnd 20 - Mexico",
 	},
 ];
 
