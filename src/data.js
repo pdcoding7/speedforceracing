@@ -171,19 +171,6 @@ export const hofConfig = [
 	},
 ];
 
-export const raceCalendar = [
-	{
-		id: 14,
-		season: "15",
-		src: "/images/s14-calender-div-1-new.png",
-	},
-	{
-		id: 15,
-		season: "15",
-		src: "/images/s14-calender-div-2-new.png",
-	},
-];
-
 export const raceResultsDiv1 = [
 	{
 		id: 1,
@@ -278,9 +265,10 @@ export const streamConfig = [
 	},
 ];
 
-export const standingsConfig = [
+export const mergedStandingsConfig = [
 	{
 		id: 1,
+		league: 1,
 		position: "1",
 		name: "VFR_Laser24",
 		team: "McLaren",
@@ -292,6 +280,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 2,
+		league: 1,
 		position: "2",
 		name: "MDJ",
 		team: "Mercedes",
@@ -303,6 +292,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 3,
+		league: 1,
 		position: "3",
 		name: "BTL Harry Kane",
 		team: "McLaren",
@@ -314,6 +304,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 4,
+		league: 1,
 		position: "4",
 		name: "SFR_Mhartin",
 		team: "Aston Martin",
@@ -325,6 +316,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 5,
+		league: 1,
 		position: "5",
 		name: "Glock",
 		team: "Ferrari",
@@ -336,6 +328,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 6,
+		league: 1,
 		position: "6",
 		name: "Bur-Miester",
 		team: "Haas",
@@ -347,6 +340,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 7,
+		league: 1,
 		position: "7",
 		name: "Mackett__",
 		team: "Williams",
@@ -369,6 +363,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 9,
+		league: 1,
 		position: "9",
 		name: "Hazara",
 		team: "Alpine",
@@ -380,6 +375,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 10,
+		league: 1,
 		position: "10",
 		name: "RogueSmithy",
 		team: "Alpha Tauri",
@@ -391,6 +387,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 11,
+		league: 1,
 		position: "11",
 		name: "SFR_SonicHawk",
 		team: "Ferarri",
@@ -424,6 +421,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 14,
+		league: 1,
 		position: "14",
 		name: "OXR_Xenon",
 		team: "Red Bull",
@@ -435,6 +433,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 15,
+		league: 1,
 		position: "15",
 		name: "MSA Samad",
 		team: "Alpine",
@@ -446,6 +445,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 16,
+		league: 1,
 		position: "16",
 		name: "Mansell-19",
 		team: "Alfa Romeo",
@@ -468,6 +468,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 18,
+		league: 1,
 		position: "18",
 		name: "Cassidy",
 		team: "Aston Martin",
@@ -490,6 +491,7 @@ export const standingsConfig = [
 	},
 	{
 		id: 20,
+		league: 1,
 		position: "20",
 		name: "SamuPapito",
 		team: "Alfa Romeo",
@@ -499,94 +501,9 @@ export const standingsConfig = [
 		fastest: "",
 		points: "42",
 	},
-];
-
-export const constructorsConfig = [
 	{
-		id: 1,
-		position: "1",
-		team: "McLaren",
-		teamBadge: "/images/team-mcl.png",
-		wins: "11",
-		points: "733",
-	},
-	{
-		id: 2,
-		position: "2",
-		team: "Mercedes",
-		teamBadge: "/images/team-merc.png",
-		wins: "5",
-		points: "535",
-	},
-	{
-		id: 3,
-		position: "3",
-		team: "Red Bull",
-		teamBadge: "/images/team-rb.png",
-		wins: "2",
-		points: "471",
-	},
-	{
-		id: 4,
-		position: "4",
-		team: "Alpine",
-		teamBadge: "/images/team-alp.png",
-		wins: "3",
-		points: "450",
-	},
-	{
-		id: 5,
-		position: "5",
-		team: "Ferrari",
-		teamBadge: "/images/team-fer.png",
-		wins: "1",
-		points: "363",
-	},
-	{
-		id: 6,
-		position: "6",
-		team: "Haas",
-		teamBadge: "/images/team-haas.png",
-		wins: "",
-		points: "351",
-	},
-	{
-		id: 7,
-		position: "7",
-		team: "Williams",
-		teamBadge: "/images/team-will.png",
-		wins: "",
-		points: "337",
-	},
-	{
-		id: 8,
-		position: "8",
-		team: "Alpha Tauri",
-		teamBadge: "/images/team-at.png",
-		wins: "",
-		points: "333",
-	},
-	{
-		id: 9,
-		position: "9",
-		team: "Aston Martin",
-		teamBadge: "/images/team-am.png",
-		wins: "",
-		points: "307",
-	},
-	{
-		id: 10,
-		position: "10",
-		team: "Alfa Romeo",
-		teamBadge: "/images/team-ar.png",
-		wins: "1",
-		points: "248",
-	},
-];
-
-export const standingsGP2Config = [
-	{
-		id: 1,
+		id: 21,
+		league: 2,
 		position: "1",
 		name: "Surj_SH",
 		team: "Alpine",
@@ -597,7 +514,8 @@ export const standingsGP2Config = [
 		points: "351",
 	},
 	{
-		id: 2,
+		id: 22,
+		league: 2,
 		position: "2",
 		name: "SFR_TheVicar",
 		team: "Alpha Tauri",
@@ -608,7 +526,8 @@ export const standingsGP2Config = [
 		points: "307",
 	},
 	{
-		id: 3,
+		id: 23,
+		league: 2,
 		position: "3",
 		name: "SFR-energydan",
 		team: "Mercedes",
@@ -619,7 +538,8 @@ export const standingsGP2Config = [
 		points: "292",
 	},
 	{
-		id: 4,
+		id: 24,
+		league: 2,
 		position: "4",
 		name: "utkarsh_xlri",
 		team: "Haas",
@@ -630,7 +550,8 @@ export const standingsGP2Config = [
 		points: "275",
 	},
 	{
-		id: 5,
+		id: 25,
+		league: 2,
 		position: "5",
 		name: "SFR_MADG",
 		team: "Red Bull",
@@ -641,7 +562,8 @@ export const standingsGP2Config = [
 		points: "223",
 	},
 	{
-		id: 6,
+		id: 26,
+		league: 2,
 		position: "6",
 		name: "Ska-Aydams1",
 		team: "Alpine",
@@ -652,7 +574,8 @@ export const standingsGP2Config = [
 		points: "213",
 	},
 	{
-		id: 7,
+		id: 27,
+		league: 2,
 		position: "7",
 		name: "SFR_Calvin_Racing",
 		team: "Alfa Romeo",
@@ -663,7 +586,8 @@ export const standingsGP2Config = [
 		points: "212",
 	},
 	{
-		id: 8,
+		id: 28,
+		league: 2,
 		position: "8",
 		name: "SFR_Doran",
 		team: "Aston Martin",
@@ -674,7 +598,8 @@ export const standingsGP2Config = [
 		points: "202",
 	},
 	{
-		id: 9,
+		id: 29,
+		league: 2,
 		position: "9",
 		name: "MrWigglesff",
 		team: "Ferarri",
@@ -685,7 +610,8 @@ export const standingsGP2Config = [
 		points: "198",
 	},
 	{
-		id: 10,
+		id: 30,
+		league: 2,
 		position: "10",
 		name: "Mindful_wasp",
 		team: "Mercedes",
@@ -696,7 +622,8 @@ export const standingsGP2Config = [
 		points: "192",
 	},
 	{
-		id: 11,
+		id: 31,
+		league: 2,
 		position: "11",
 		name: "SFR-Thebear2312",
 		team: "Aston Martin",
@@ -707,7 +634,8 @@ export const standingsGP2Config = [
 		points: "183",
 	},
 	{
-		id: 12,
+		id: 32,
+		league: 2,
 		position: "12",
 		name: "Gijsselodeon",
 		team: "Red Bull",
@@ -718,7 +646,8 @@ export const standingsGP2Config = [
 		points: "158",
 	},
 	{
-		id: 13,
+		id: 33,
+		league: 2,
 		position: "13",
 		name: "Noldus",
 		team: "Williams",
@@ -729,7 +658,8 @@ export const standingsGP2Config = [
 		points: "141",
 	},
 	{
-		id: 14,
+		id: 34,
+		league: 2,
 		position: "14",
 		name: "Marcqwerty1",
 		team: "Alpha Tauri",
@@ -740,7 +670,8 @@ export const standingsGP2Config = [
 		points: "140",
 	},
 	{
-		id: 15,
+		id: 35,
+		league: 2,
 		position: "15",
 		name: "SFR-BossyGaming",
 		team: "Haas",
@@ -751,7 +682,8 @@ export const standingsGP2Config = [
 		points: "137",
 	},
 	{
-		id: 16,
+		id: 36,
+		league: 2,
 		position: "16",
 		name: "SFR-BritishGuy69",
 		team: "McLaren",
@@ -762,7 +694,8 @@ export const standingsGP2Config = [
 		points: "93",
 	},
 	{
-		id: 17,
+		id: 37,
+		league: 2,
 		position: "17",
 		name: "KeithB",
 		team: "Williams",
@@ -773,7 +706,8 @@ export const standingsGP2Config = [
 		points: "82",
 	},
 	{
-		id: 18,
+		id: 38,
+		league: 2,
 		position: "18",
 		name: "SFR-NFSHW",
 		team: "McLaren",
@@ -784,7 +718,8 @@ export const standingsGP2Config = [
 		points: "81",
 	},
 	{
-		id: 19,
+		id: 39,
+		league: 2,
 		position: "19",
 		name: "Ellie",
 		team: "Alfa Romeo",
@@ -796,9 +731,100 @@ export const standingsGP2Config = [
 	},
 ];
 
-export const constructorsGP2Config = [
+export const mergedConstructorsConfig = [
 	{
 		id: 1,
+		league: 1,
+		position: "1",
+		team: "McLaren",
+		teamBadge: "/images/team-mcl.png",
+		wins: "9",
+		points: "620",
+	},
+	{
+		id: 2,
+		league: 1,
+		position: "2",
+		team: "Mercedes",
+		teamBadge: "/images/team-merc.png",
+		wins: "4",
+		points: "491",
+	},
+	{
+		id: 3,
+		league: 1,
+		position: "3",
+		team: "Alpine",
+		teamBadge: "/images/team-alp.png",
+		wins: "3",
+		points: "434",
+	},
+	{
+		id: 4,
+		league: 1,
+		position: "4",
+		team: "Red Bull",
+		teamBadge: "/images/team-rb.png",
+		wins: "2",
+		points: "379",
+	},
+	{
+		id: 5,
+		league: 1,
+		position: "5",
+		team: "Williams",
+		teamBadge: "/images/team-will.png",
+		wins: "",
+		points: "314",
+	},
+	{
+		id: 6,
+		league: 1,
+		position: "6",
+		team: "Alpha Tauri",
+		teamBadge: "/images/team-at.png",
+		wins: "",
+		points: "309",
+	},
+	{
+		id: 7,
+		league: 1,
+		position: "7",
+		team: "Haas",
+		teamBadge: "/images/team-haas.png",
+		wins: "",
+		points: "287",
+	},
+	{
+		id: 8,
+		league: 1,
+		position: "8",
+		team: "Ferrari",
+		teamBadge: "/images/team-fer.png",
+		wins: "1",
+		points: "271",
+	},
+	{
+		id: 9,
+		league: 1,
+		position: "9",
+		team: "Aston Martin",
+		teamBadge: "/images/team-am.png",
+		wins: "",
+		points: "234",
+	},
+	{
+		id: 10,
+		league: 1,
+		position: "10",
+		team: "Alfa Romeo",
+		teamBadge: "/images/team-ar.png",
+		wins: "1",
+		points: "211",
+	},
+	{
+		id: 11,
+		league: 2,
 		position: "1",
 		team: "Alpine",
 		teamBadge: "/images/team-alp.png",
@@ -806,7 +832,8 @@ export const constructorsGP2Config = [
 		points: "563",
 	},
 	{
-		id: 2,
+		id: 12,
+		league: 2,
 		position: "2",
 		team: "Mercedes",
 		teamBadge: "/images/team-merc.png",
@@ -814,7 +841,8 @@ export const constructorsGP2Config = [
 		points: "502",
 	},
 	{
-		id: 3,
+		id: 13,
+		league: 2,
 		position: "3",
 		team: "Alpha Tauri",
 		teamBadge: "/images/team-at.png",
@@ -822,7 +850,8 @@ export const constructorsGP2Config = [
 		points: "449",
 	},
 	{
-		id: 4,
+		id: 14,
+		league: 2,
 		position: "4",
 		team: "Haas",
 		teamBadge: "/images/team-haas.png",
@@ -830,7 +859,8 @@ export const constructorsGP2Config = [
 		points: "420",
 	},
 	{
-		id: 5,
+		id: 15,
+		league: 2,
 		position: "5",
 		team: "Red Bull",
 		teamBadge: "/images/team-rb.png",
@@ -838,7 +868,8 @@ export const constructorsGP2Config = [
 		points: "414",
 	},
 	{
-		id: 6,
+		id: 16,
+		league: 2,
 		position: "6",
 		team: "Ferrari",
 		teamBadge: "/images/team-fer.png",
@@ -846,7 +877,8 @@ export const constructorsGP2Config = [
 		points: "402",
 	},
 	{
-		id: 7,
+		id: 17,
+		league: 2,
 		position: "7",
 		team: "Williams",
 		teamBadge: "/images/team-will.png",
@@ -854,7 +886,8 @@ export const constructorsGP2Config = [
 		points: "401",
 	},
 	{
-		id: 8,
+		id: 18,
+		league: 2,
 		position: "8",
 		team: "Aston Martin",
 		teamBadge: "/images/team-am.png",
@@ -862,7 +895,8 @@ export const constructorsGP2Config = [
 		points: "385",
 	},
 	{
-		id: 9,
+		id: 19,
+		league: 2,
 		position: "9",
 		team: "Alfa Romeo",
 		teamBadge: "/images/team-ar.png",
@@ -870,7 +904,8 @@ export const constructorsGP2Config = [
 		points: "256",
 	},
 	{
-		id: 10,
+		id: 20,
+		league: 2,
 		position: "10",
 		team: "McLaren",
 		teamBadge: "/images/team-mcl.png",
