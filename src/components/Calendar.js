@@ -1,6 +1,5 @@
 import CalendarComponent from "./CalendarComponent";
 import SectionTitle from "./SectionTitle";
-import Tabs from "./Tabs";
 
 const Calendar = () => {
 	return (
