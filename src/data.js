@@ -503,6 +503,7 @@ export const mergedStandingsConfig = [
 	},
 	{
 		id: 21,
+		league: 2,
 		position: "1",
 		name: "Surj_SH",
 		team: "Alpine",
@@ -538,6 +539,7 @@ export const mergedStandingsConfig = [
 	},
 	{
 		id: 24,
+		league: 2,
 		position: "4",
 		name: "utkarsh_xlri",
 		team: "Haas",
@@ -621,6 +623,7 @@ export const mergedStandingsConfig = [
 	},
 	{
 		id: 31,
+		league: 2,
 		position: "11",
 		name: "SFR-Thebear2312",
 		team: "Aston Martin",
@@ -656,6 +659,7 @@ export const mergedStandingsConfig = [
 	},
 	{
 		id: 34,
+		league: 2,
 		position: "14",
 		name: "Marcqwerty1",
 		team: "Alpha Tauri",
@@ -667,6 +671,7 @@ export const mergedStandingsConfig = [
 	},
 	{
 		id: 35,
+		league: 2,
 		position: "15",
 		name: "SFR-BossyGaming",
 		team: "Haas",
@@ -678,6 +683,7 @@ export const mergedStandingsConfig = [
 	},
 	{
 		id: 36,
+		league: 2,
 		position: "16",
 		name: "SFR-BritishGuy69",
 		team: "McLaren",
@@ -689,6 +695,7 @@ export const mergedStandingsConfig = [
 	},
 	{
 		id: 37,
+		league: 2,
 		position: "17",
 		name: "KeithB",
 		team: "Williams",
@@ -700,6 +707,7 @@ export const mergedStandingsConfig = [
 	},
 	{
 		id: 38,
+		league: 2,
 		position: "18",
 		name: "SFR-NFSHW",
 		team: "McLaren",
@@ -711,6 +719,7 @@ export const mergedStandingsConfig = [
 	},
 	{
 		id: 39,
+		league: 2,
 		position: "19",
 		name: "Ellie",
 		team: "Alfa Romeo",
