@@ -6,20 +6,22 @@ import HallOfFame from "./components/HallOfFame";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import Calendar from "./components/Calendar";
+import Tabs from "./components/Tabs";
 
 function App() {
-  return (
-    <>
-      <Navbar></Navbar>
-      <Hero />
-      <Calendar />
-      <Standings />
-      <PastStreams />
-      <Gallery />
-      <HallOfFame />
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Navbar></Navbar>
+			<Hero />
+			<Calendar />
+			<Standings />
+			<PastStreams />
+			<Gallery />
+			<HallOfFame />
+			<Footer />
+			<Tabs />
+		</>
+	);
 }
 
 export default App;
