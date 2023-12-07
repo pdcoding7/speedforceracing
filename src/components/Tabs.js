@@ -1,19 +1,17 @@
 import { useState } from "react";
-import Calendar from "./Calendar";
 
 function Tabs() {
 	const [currentTab, setCurrentTab] = useState("1");
-
 	const tabs = [
 		{
 			id: 1,
 			tabTitle: "Divison 1",
-			content: <Calendar />,
+			content: "1",
 		},
 		{
 			id: 2,
 			tabTitle: "Divison 2",
-			content: <Calendar />,
+			content: "2",
 		},
 	];
 

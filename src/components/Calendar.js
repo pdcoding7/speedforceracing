@@ -1,24 +1,15 @@
-import { raceCalendar } from "../data";
+import CalendarComponent from "./CalendarComponent";
 import SectionTitle from "./SectionTitle";
+import Tabs from "./Tabs";
 
 const Calendar = () => {
-  return (
-    <section className="section" id="calendar">
-      <SectionTitle sectionTitle="Race Calendar"></SectionTitle>
-      <div className="fameFlex">
-        {raceCalendar.map((seasonNum) => {
-          const { id, season, src } = seasonNum;
-          return (
-            <div className="flexDiv">
-              <div className="calendarImg" key={id}>
-                <img src={src} alt={`Season ${season} Calendar`} />
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </section>
-  );
+	return (
+		<section className="section" id="calendar">
+			<SectionTitle sectionTitle="Race Calendar"></SectionTitle>
+			<CalendarComponent src="/images/s14-calender-div-1-new.png" />
+			<CalendarComponent src="/images/s14-calender-div-2-new.png" />
+		</section>
+	);
 };
 
 export default Calendar;
