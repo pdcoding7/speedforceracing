@@ -20,8 +20,8 @@ export const SidebarData = [
 		iconOpened: <RiIcons.RiArrowUpSFill />,
 	},
 	{
-		title: "Standings - Div 1",
-		path: "#gp1Standings",
+		title: "Standings",
+		path: "#standings",
 		icon: <IoIcons.IoIosPaper />,
 		iconClosed: <RiIcons.RiArrowDownSFill />,
 		iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -37,27 +37,6 @@ export const SidebarData = [
 		//     icon: <IoIcons.IoIosPaper />,
 		//   },
 		// ],
-	},
-	{
-		title: "Standings - Div 2",
-		path: "#gp2Standings",
-		icon: <IoIcons.IoIosPaper />,
-		iconClosed: <RiIcons.RiArrowDownSFill />,
-		iconOpened: <RiIcons.RiArrowUpSFill />,
-	},
-	// {
-	// 	title: "Standings - RP Div",
-	// 	path: "#rpStandings",
-	// 	icon: <IoIcons.IoIosPaper />,
-	// 	iconClosed: <RiIcons.RiArrowDownSFill />,
-	// 	iconOpened: <RiIcons.RiArrowUpSFill />,
-	// },
-	{
-		title: "Cross Div Constructors",
-		path: "#crossDivStandings",
-		icon: <IoIcons.IoIosPaper />,
-		iconClosed: <RiIcons.RiArrowDownSFill />,
-		iconOpened: <RiIcons.RiArrowUpSFill />,
 	},
 	{
 		title: "Past Streams",

@@ -6,6 +6,7 @@ import HallOfFame from "./components/HallOfFame";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import Calendar from "./components/Calendar";
+import Tabs from "./components/Tabs";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 			<Gallery />
 			<HallOfFame />
 			<Footer />
+			<Tabs />
 		</>
 	);
 }
