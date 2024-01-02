@@ -234,13 +234,13 @@ export const gp2Slider = [
 export const streamConfig = [
 	{
 		id: 1,
-		src: "https://www.youtube.com/embed/nR1fac_Ivps?si=cZYvRMmI7C-qDQ_B",
-		title: "Div 1 - Rnd 22 - Vegas",
+		src: "https://www.youtube.com/embed/nR1fac_Ivps?si=bOCxWi9JFeVizViD",
+		title: "Div 1 - Rnd 23 - Austria/Abu Dhabi",
 	},
 	{
 		id: 2,
-		src: "https://www.youtube.com/embed/y013HALt-qU?si=TNV-ymBH_o6l_cN2",
-		title: "Div 2 - Rnd 22 - Vegas",
+		src: "https://www.youtube.com/embed/h_Kb30arxmM?si=3js7RS-ecNBAalmf",
+		title: "Div 2 - Rnd 23 - Austria/Abu Dhabi",
 	},
 ];
 
