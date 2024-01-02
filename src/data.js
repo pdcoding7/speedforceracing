@@ -235,7 +235,7 @@ export const streamConfig = [
 	{
 		id: 1,
 		src: "https://www.youtube.com/embed/nR1fac_Ivps?si=bOCxWi9JFeVizViD",
-		title: "Div 1 - Rnd 23 - Austria/Abu Dhabi",
+		title: "Div 1 - Rnd 22 - Las Vegas",
 	},
 	{
 		id: 2,
