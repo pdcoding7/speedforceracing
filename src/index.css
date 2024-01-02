@@ -140,7 +140,7 @@ Hero
 }
   .hero {
     background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
-      url('./images/f122-background.jpg') center/cover no-repeat;
+      url('./images/f123-background.jpg') center/cover no-repeat;
   }
   .hero-banner {
     padding: 0;
@@ -153,6 +153,10 @@ Hero
   @media screen and (max-width: 800px) {
   .hero {
     min-height: 88vh;
+  }
+  .hero {
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
+      url('./images/f123-background-m.jpg') center/cover no-repeat;
   }
   }
 

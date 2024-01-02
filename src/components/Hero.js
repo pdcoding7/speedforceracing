@@ -6,7 +6,7 @@ const Hero = () => {
 		<section className="hero" id="home">
 			<div className="hero-banner">
 				<img src={logo} className="nav-logo" alt="SpeedForce Racing" />
-				<p>Speed Force Racing have entered our 14th season of quality, competitive league racing. Still recruiting, all abilities are welcome.</p>
+				<p>Speed Force Racing are entering our 15th season of clean, competitive league racing. Recruiting for S15, all abilities are welcome.</p>
 				<p>Join our Discord server for information on how to join us on the grid.</p>
 				<a href="https://discord.gg/8hB3MMfGy4">
 					<DefaultButton>
