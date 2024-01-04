@@ -84,6 +84,11 @@ export const socialLinks = [
 
 export const hofConfig = [
 	{
+		id: 14,
+		season: "14",
+		src: "/images/hof-s14.png",
+	},
+	{
 		id: 13,
 		season: "13",
 		src: "/images/hof-s13.png",
