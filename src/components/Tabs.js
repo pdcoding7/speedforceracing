@@ -24,9 +24,9 @@ function Tabs() {
 			tabTitle: "Divison 2",
 			content: (
 				<>
-					<DivisionTitle division="Division 2" typeOf="- Final Driver Standings" id="#gp2Standings" />
+					<DivisionTitle division="Division 2" typeOf="- Driver Standings" id="#gp2Standings" />
 					<StandingsComponent league={2} />
-					<DivisionTitle division="Division 2" typeOf="- Final Constructors Standings" />
+					<DivisionTitle division="Division 2" typeOf="- Constructors Standings" />
 					<StandingsContructorsComponent league={2} />
 				</>
 			),
