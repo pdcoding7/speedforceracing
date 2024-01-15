@@ -12,9 +12,9 @@ function Tabs() {
 			tabTitle: "Divison 1",
 			content: (
 				<>
-					<DivisionTitle division="Division 1" typeOf="- Final Driver Standings" id="#gp1Standings" />
+					<DivisionTitle division="Division 1" typeOf="- Driver Standings" id="#gp1Standings" />
 					<StandingsComponent league={1} />
-					<DivisionTitle division="Division 1" typeOf="- Final Constructors Standings" />
+					<DivisionTitle division="Division 1" typeOf="- Constructors Standings" />
 					<StandingsContructorsComponent league={1} />
 				</>
 			),
@@ -36,7 +36,7 @@ function Tabs() {
 			tabTitle: "Overall",
 			content: (
 				<>
-					<DivisionTitle division="Cross Div" typeOf="- Final Constructors Standings" />
+					<DivisionTitle division="Cross Div" typeOf="- Constructors Standings" />
 					<StandingsOverallComponent />
 				</>
 			),
