@@ -216,21 +216,26 @@ export const gp1Slider = [
 export const gp2Slider = [
 	{
 		id: 1,
+		imgPath: "/images/img-ollie-new.jpg",
+		desc: "Fighting for places at turn 1 of the Hungaroring. Submitted by SFR-OliverF1",
+	},
+	{
+		id: 2,
 		imgPath: "/images/img-ollie.jpg",
 		desc: "SFR-OliverF1 and Vernex_EU batting it out at turn 5 of Portimao, in the penultimate race of the Div 2 season",
 	},
 	{
-		id: 2,
+		id: 3,
 		imgPath: "/images/img-bossy-3.jpg",
 		desc: "SFR-BossyGaming chasing down SFR-NFSHW as the track dries up in Australia, Rnd 2. ",
 	},
 	{
-		id: 3,
+		id: 4,
 		imgPath: "/images/img-bossy-2.jpg",
 		desc: "And the Haas of SFR-BossyGaming takes the inside to steal P6 from SFR-NFSHW. Australia Rnd 2",
 	},
 	{
-		id: 4,
+		id: 5,
 		imgPath: "/images/img-bossy-1.jpg",
 		desc: "Clean air! Move done and time to push on for SFR-BossyGaming. Australia Rnd 2.",
 	},
