@@ -22,7 +22,6 @@ const Standings = () => {
 								<StandingsContructorsComponent league={1} />
 							</>
 						),
-						defaultTab: true,
 					},
 					{
 						id: 2,
@@ -35,7 +34,6 @@ const Standings = () => {
 								<StandingsContructorsComponent league={2} />
 							</>
 						),
-						defaultTab: false,
 					},
 					{
 						id: 3,
@@ -46,7 +44,6 @@ const Standings = () => {
 								<StandingsOverallComponent />
 							</>
 						),
-						defaultTab: false,
 					},
 				]}
 			/>
