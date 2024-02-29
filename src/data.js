@@ -929,7 +929,6 @@ export const constructorsAllConfig = [
 		teamBadge: "/images/team-rb.png",
 		div1: "198",
 		div2: "193",
-		totalPoints: "391",
 	},
 	{
 		id: 2,
@@ -938,7 +937,6 @@ export const constructorsAllConfig = [
 		teamBadge: "/images/team-will.png",
 		div1: "201",
 		div2: "189",
-		totalPoints: "390",
 	},
 	{
 		id: 3,
@@ -947,7 +945,6 @@ export const constructorsAllConfig = [
 		teamBadge: "/images/team-at.png",
 		div1: "195",
 		div2: "173",
-		totalPoints: "324",
 	},
 	{
 		id: 4,
@@ -956,7 +953,6 @@ export const constructorsAllConfig = [
 		teamBadge: "/images/team-mcl.png",
 		div1: "152",
 		div2: "174",
-		totalPoints: "326",
 	},
 	{
 		id: 5,
@@ -965,7 +961,6 @@ export const constructorsAllConfig = [
 		teamBadge: "/images/team-alp.png",
 		div1: "142",
 		div2: "182",
-		totalPoints: "324",
 	},
 	{
 		id: 6,
@@ -974,7 +969,6 @@ export const constructorsAllConfig = [
 		teamBadge: "/images/team-merc.png",
 		div1: "220",
 		div2: "91",
-		totalPoints: "311",
 	},
 	{
 		id: 7,
@@ -983,7 +977,6 @@ export const constructorsAllConfig = [
 		teamBadge: "/images/team-ar.png",
 		div1: "129",
 		div2: "152",
-		totalPoints: "281",
 	},
 	{
 		id: 8,
@@ -992,7 +985,6 @@ export const constructorsAllConfig = [
 		teamBadge: "/images/team-am.png",
 		div1: "124",
 		div2: "133",
-		totalPoints: "257",
 	},
 	{
 		id: 9,
@@ -1001,7 +993,6 @@ export const constructorsAllConfig = [
 		teamBadge: "/images/team-fer.png",
 		div1: "115",
 		div2: "121",
-		totalPoints: "236",
 	},
 	{
 		id: 10,
@@ -1010,6 +1001,5 @@ export const constructorsAllConfig = [
 		teamBadge: "/images/team-haas.png",
 		div1: "86",
 		div2: "148",
-		totalPoints: "234",
 	},
 ];
