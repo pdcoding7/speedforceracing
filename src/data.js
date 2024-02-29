@@ -636,7 +636,7 @@ export const mergedStandingsConfig = [
 		teamBadge: "/images/team-fer.png",
 		wins: "",
 		podiums: "",
-		fastest: "",
+		fastest: "1",
 		points: "67",
 	},
 	{
