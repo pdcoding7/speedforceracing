@@ -23,7 +23,7 @@ const HallOfFame = () => {
 			<AccordionComponent
 				items={[
 					{
-						question: "Seasons 1-10 Champions",
+						question: "Seasons 1-10",
 						answer: (
 							<div className="fameFlex">
 								{hofConfig.map((seasonNum) => {
