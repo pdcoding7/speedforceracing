@@ -9,6 +9,7 @@ const StyledAccordionComponent = styled.div`
 	alig-items: center;
 	justify-content: center;
 	background: #fff;
+	margin-bottom: 4vw;
 `;
 
 const StyledContainer = styled.div`
@@ -31,9 +32,7 @@ const StyledWrap = styled.div`
 	align-items: center;
 	width: 100%;
 	text-align: center;
-	margin-bottom: 4vw;
 	cursor: pointer;
-
 	h1 {
 		padding: 2rem;
 		font-size: 2rem;
@@ -44,7 +43,9 @@ const StyledWrap = styled.div`
 	}
 `;
 
-const StyledDropDown = styled.div``;
+const StyledDropDown = styled.div`
+	margin-top: 2vw;
+`;
 
 const AccordionComponent = ({ items }) => {
 	const [clicked, setClicked] = useState(null);
