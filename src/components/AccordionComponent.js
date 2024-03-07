@@ -47,7 +47,7 @@ const StyledDropDown = styled.div`
 	margin-top: 2vw;
 
 	@media screen and (max-width: 800px) {
-		margin-top: 4vw;
+		margin-top: 6vw;
 	}
 `;
 
