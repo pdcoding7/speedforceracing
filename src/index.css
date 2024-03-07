@@ -355,7 +355,7 @@ h2.sectionHeader {margin-bottom:0;}
   #hallOfFame h2 {color:#000; margin:auto; text-align: center;}
   #hallOfFame img {margin:auto; margin-top:1rem; margin-bottom: 2rem;}
   #hallOfFame .fameFlex .flexDiv {width:48%;}
-  #hallOfFame .fameFlex {display: flex; flex-wrap: wrap; justify-content: space-between; width:80%; margin: auto;}
+  #hallOfFame .fameFlex {display: flex; flex-wrap: wrap; justify-content: space-between; width:80%; margin: auto auto 2vw auto;}
 
   #hallOfFame .sectionDiv > :nth-child(1) {  background: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%) 50% /
     20px 20px;}
