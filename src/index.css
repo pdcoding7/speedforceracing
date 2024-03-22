@@ -620,7 +620,7 @@ h2.sectionHeader {margin-bottom:0;}
           #calendar .tabs {     
             width: 50%;
             gap:2.5vw;
-            margin-left:17%;
+            justify-content: center;
         }
       } 
 
@@ -629,7 +629,7 @@ h2.sectionHeader {margin-bottom:0;}
           .tabs button:disabled {font-size:20px; padding:6%;}
           .tabs {     
             width: 60%;
-            margin-left:5%;
+            justify-content: center;
             gap: 2.5vw;}
 
             #calendar .tabs button {padding:8%;}
