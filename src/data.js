@@ -742,15 +742,6 @@ export const mergedStandingsConfig = [
 
 export const mergedConstructorsConfig = [
 	{
-		id: 2,
-		position: "2",
-		league: 1,
-		team: "Mercedes",
-		teamBadge: "/images/team-merc.png",
-		wins: "1",
-		points: "317",
-	},
-	{
 		id: 1,
 		position: "1",
 		league: 1,
@@ -758,6 +749,15 @@ export const mergedConstructorsConfig = [
 		teamBadge: "/images/team-rb.png",
 		wins: "3",
 		points: "340",
+	},
+	{
+		id: 2,
+		position: "2",
+		league: 1,
+		team: "Mercedes",
+		teamBadge: "/images/team-merc.png",
+		wins: "1",
+		points: "317",
 	},
 	{
 		id: 3,
