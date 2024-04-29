@@ -6,6 +6,9 @@ const Calendar = () => {
 	return (
 		<section className="section" id="calendar">
 			<SectionTitle sectionTitle="Race Calendar"></SectionTitle>
+
+			<img className="welcomeImage" src="/images/f1-24-welcome.png" alt="Season Welcome"></img>
+
 			<Tabs
 				tabs={[
 					{
