@@ -640,6 +640,6 @@ h2.sectionHeader {margin-bottom:0;}
         #calendar .welcomeImage {width:60%; margin: 4% auto;}
 
         @media screen and (max-width: 900px) {
-        #calendar .welcomeImage {width:90%; margin: auto; margin-bottom: 10%;}
+        #calendar .welcomeImage {width:95%; margin: auto; margin-bottom: 10%;}
         }
 
