@@ -637,4 +637,9 @@ h2.sectionHeader {margin-bottom:0;}
               gap: 4vw;}
         }
 
+        #calendar .welcomeImage {width:60%; margin: 4% auto;}
+
+        @media screen and (max-width: 900px) {
+        #calendar .welcomeImage {width:90%; margin: auto; margin-bottom: 10%;}
+        }
 
