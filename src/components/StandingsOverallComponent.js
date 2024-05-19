@@ -39,7 +39,7 @@ const StandingsOverallComponent = () => {
 							</td>
 							<td>{div1}</td>
 							<td>{div2}</td>
-							<td>{Number(div1) + Number(div2)}</td>
+							<td className="combinedTotal">{Number(div1) + Number(div2)}</td>
 						</tr>
 					);
 				})}

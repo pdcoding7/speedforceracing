@@ -501,6 +501,10 @@ h2.sectionHeader {margin-bottom:0;}
       width:6%;
     }
 
+    #standings .combinedTotal {
+      background-color:lightgray;
+    }
+
     #standings .poleCol {
       color:var(--clr-white);
       border-radius: 10%;
