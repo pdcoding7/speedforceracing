@@ -502,7 +502,7 @@ export const mergedStandingsConfig = [
 		id: 21,
 		position: "1",
 		league: 2,
-		name: "SFR_Keefs",
+		name: "SFR_Keefs (C)",
 		team: "Alpine",
 		teamBadge: "/images/team-alp.png",
 		wins: "3",
