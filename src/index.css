@@ -140,7 +140,7 @@ Hero
 }
   .hero {
     background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
-      url('./images/f123-background.jpg') center/cover no-repeat;
+      url('./images/f124-background-m.jpg') center/cover no-repeat;
   }
   .hero-banner {
     padding: 0;
@@ -156,7 +156,7 @@ Hero
   }
   .hero {
     background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
-      url('./images/f123-background-m.jpg') center/cover no-repeat;
+      url('./images/f124-background-m.jpg') center no-repeat;
   }
   }
 
@@ -641,9 +641,9 @@ h2.sectionHeader {margin-bottom:0;}
               gap: 4vw;}
         }
 
-        #calendar .welcomeImage {width:60%; margin: 4% auto;}
+        #calendar .welcomeImage {width:50%; margin: 4% auto;}
 
         @media screen and (max-width: 900px) {
-        #calendar .welcomeImage {width:95%; margin: auto; margin-bottom: 10%;}
+        #calendar .welcomeImage {width:90%; margin: auto; margin-bottom: 10%;}
         }
 
