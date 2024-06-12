@@ -7,9 +7,9 @@ const Calendar = () => {
 		<section className="section" id="calendar">
 			<SectionTitle sectionTitle="Race Calendar"></SectionTitle>
 
-			<img className="welcomeImage" src="/images/f1-24-welcome.png" alt="Season Welcome"></img>
+			<img className="welcomeImage" src="/images/f1-24-welcome-new.png" alt="Season Welcome"></img>
 
-			<Tabs
+			{/* <Tabs
 				tabs={[
 					{
 						id: 1,
@@ -22,7 +22,7 @@ const Calendar = () => {
 						content: <CalendarComponent src="/images/s14-calender-div-2-s15.png" />,
 					},
 				]}
-			/>
+			/> */}
 		</section>
 	);
 };
