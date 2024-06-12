@@ -93,6 +93,9 @@ export const currentHofConfig = [
 		season: "13",
 		src: "/images/hof-s13.png",
 	},
+];
+
+export const hofConfig = [
 	{
 		id: 12,
 		season: "12",
@@ -103,9 +106,6 @@ export const currentHofConfig = [
 		season: "11",
 		src: "/images/hof-s11.png",
 	},
-];
-
-export const hofConfig = [
 	{
 		id: 10,
 		season: "10",
