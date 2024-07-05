@@ -601,8 +601,8 @@ h2.sectionHeader {margin-bottom:0;}
       #calendar .tabs {     
         justify-content: space-evenly;
         display: flex;
-        width: 35vw;
-        gap: 1vw;
+        width: 25vw;
+        gap: 0vw;
         margin: 3vw auto;}
 
 
@@ -616,6 +616,7 @@ h2.sectionHeader {margin-bottom:0;}
           #calendar .tabs {     
             gap:2.5vw;
             justify-content: center;
+            width:60vw;
         }
       } 
 
