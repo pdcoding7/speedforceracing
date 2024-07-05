@@ -1101,7 +1101,7 @@ export const mergedConstructorsConfig = [
 		id: 21,
 		position: "1",
 		league: 3,
-		team: "Red Bull (C)",
+		team: "Red Bull",
 		teamBadge: "/images/team-rb.png",
 		wins: "",
 		points: "",
