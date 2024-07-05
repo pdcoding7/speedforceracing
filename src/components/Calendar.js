@@ -7,22 +7,25 @@ const Calendar = () => {
 		<section className="section" id="calendar">
 			<SectionTitle sectionTitle="Race Calendar"></SectionTitle>
 
-			<img className="welcomeImage" src="/images/f1-24-welcome-new.png" alt="Season Welcome"></img>
-
-			{/* <Tabs
+			<Tabs
 				tabs={[
 					{
 						id: 1,
 						tabTitle: "Division 1",
-						content: <CalendarComponent src="/images/s14-calender-div-1-s15.png" />,
+						content: <CalendarComponent src="/images/calender-div-1-s16.png" />,
 					},
 					{
 						id: 2,
 						tabTitle: "Division 2",
-						content: <CalendarComponent src="/images/s14-calender-div-2-s15.png" />,
+						content: <CalendarComponent src="/images/calender-div-2-s16.png" />,
+					},
+					{
+						id: 3,
+						tabTitle: "Division 3",
+						content: <CalendarComponent src="/images/calender-div-3-s16.png" />,
 					},
 				]}
-			/> */}
+			/>
 		</section>
 	);
 };

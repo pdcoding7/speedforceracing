@@ -415,10 +415,10 @@ h2.sectionHeader {margin-bottom:0;}
   #calendar .sectionDiv > :nth-child(3) {  background: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%) 50% /
     20px 20px;}
 
-  #calendar .calendarImg {margin:auto; width:40%; margin-bottom:2rem;}
+  #calendar .calendarImg {margin:auto; width:30%; margin-bottom:2rem;}
 
   @media screen and (max-width: 1000px) {
-  #calendar .calendarImg {margin:auto; width: 90%; margin-bottom:2rem;}
+  #calendar .calendarImg {margin:auto; width: 80%; margin-bottom:2rem;}
   }
   
   /* Standings */
@@ -467,7 +467,7 @@ h2.sectionHeader {margin-bottom:0;}
       width: 6rem;
     }
     #standings .blankCol {
-      width:16vw;
+      width:14vw;
     }
     #standings td.blankCol h3 {
       color: #000;
@@ -560,8 +560,8 @@ h2.sectionHeader {margin-bottom:0;}
       .tabs {     
         justify-content: space-evenly;
         display: flex;
-        width:35%;
-        gap: 0vw;
+        width:30vw;
+        gap: 1vw;
         margin: 3vw auto;
       }
 
@@ -588,7 +588,7 @@ h2.sectionHeader {margin-bottom:0;}
         #calendar .tabs button {background-color: #fff;
           color: #000;
           border: solid 2px #000;
-          padding: 6%;
+          padding: 4%;
         }
   
         #calendar .tabs button:hover {color: #fff; background-color:#000;}
@@ -601,28 +601,19 @@ h2.sectionHeader {margin-bottom:0;}
       #calendar .tabs {     
         justify-content: space-evenly;
         display: flex;
-        width: 20%;
-        gap: 0vw;
+        width: 35vw;
+        gap: 1vw;
         margin: 3vw auto;}
 
-        @media screen and (max-width: 1800px) {
-            #calendar .tabs {     
-              width: 25%;
-          }
-        }  
 
         @media screen and (max-width: 1400px) {
           .tabs {     
-            width: 35%;
-            gap: 2vw;}
-            #calendar .tabs {     
-              width: 30%;
-          }
+            width: 58%;
+            gap: 1.5vw;}
         }  
         
         @media screen and (max-width: 900px) {
           #calendar .tabs {     
-            width: 50%;
             gap:2.5vw;
             justify-content: center;
         }
