@@ -17,11 +17,14 @@ const StandingsOverallComponent = () => {
 						<h4>Div 2</h4>
 					</th>
 					<th>
+						<h4>Div 3</h4>
+					</th>
+					<th>
 						<h4>Total</h4>
 					</th>
 				</tr>
 				{constructorsAllConfig.map((constructors) => {
-					const { id, position, teamBadge, team, div1, div2 } = constructors;
+					const { id, position, teamBadge, team, div1, div2, div3 } = constructors;
 					return (
 						<tr key={id}>
 							<td>
@@ -39,7 +42,8 @@ const StandingsOverallComponent = () => {
 							</td>
 							<td>{div1}</td>
 							<td>{div2}</td>
-							<td className="combinedTotal">{Number(div1) + Number(div2)}</td>
+							<td>{div3}</td>
+							<td className="combinedTotal">{Number(div1) + Number(div2) + Number(div3)}</td>
 						</tr>
 					);
 				})}

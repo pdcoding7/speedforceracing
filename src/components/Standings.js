@@ -13,7 +13,7 @@ const Standings = () => {
 				tabs={[
 					{
 						id: 1,
-						tabTitle: "Division 1",
+						tabTitle: "Div 1",
 						content: (
 							<>
 								<DivisionTitle division="Division 1" typeOf="- Driver Standings" id="#gp1Standings" />
@@ -25,7 +25,7 @@ const Standings = () => {
 					},
 					{
 						id: 2,
-						tabTitle: "Division 2",
+						tabTitle: "Div 2",
 						content: (
 							<>
 								<DivisionTitle division="Division 2" typeOf="- Driver Standings" id="#gp1Standings" />
@@ -37,7 +37,19 @@ const Standings = () => {
 					},
 					{
 						id: 3,
-						tabTitle: "Overall",
+						tabTitle: "Div 3",
+						content: (
+							<>
+								<DivisionTitle division="Division 3" typeOf="- Driver Standings" id="#gp1Standings" />
+								<StandingsComponent league={3} />
+								<DivisionTitle division="Division 3" typeOf="- Constructors Standings" />
+								<StandingsContructorsComponent league={3} />
+							</>
+						),
+					},
+					{
+						id: 4,
+						tabTitle: "OVR",
 						content: (
 							<>
 								<DivisionTitle division="Cross Div" typeOf="- Constructors Standings" />
