@@ -229,13 +229,13 @@ export const streamConfig = [
 	},
 	{
 		id: 2,
-		src: "https://www.youtube.com/embed/Q-MCPLPFK3w?si=GJBlCjSw70nxZqXQ",
-		title: "Div 2 - Rnd 1 - Bahrain",
+		src: "https://www.youtube.com/embed/SjCf2LO9DHo?si=vf4R3nyRjdCvpq3x",
+		title: "Div 2 - Rnd 2 - Silverstone",
 	},
 	{
 		id: 3,
-		src: "https://www.youtube.com/embed/HhD5-gA06yo?si=Ttl7wQ8sJdtYeflK",
-		title: "Div 3 - Rnd 1 - Bahrain",
+		src: "https://www.youtube.com/embed/LQGZXqIZXdc?si=9I2Rvocth8rNKWDI",
+		title: "Div 3 - Rnd 2 - Silverstone",
 	},
 ];
 
