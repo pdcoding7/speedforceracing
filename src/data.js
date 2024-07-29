@@ -224,18 +224,18 @@ export const gp1Slider = [
 export const streamConfig = [
 	{
 		id: 1,
-		src: "https://www.youtube.com/embed/tLOf7vgXv_w?si=GHYttrlRhPt03oBD",
-		title: "Div 1 - Rnd 3 - Saudi Arabia",
+		src: "https://www.youtube.com/embed/jvOInz86jb4?si=mdDkeG3yhIOLfvEJ",
+		title: "Div 1 - Rnd 4 - Hungary",
 	},
 	{
 		id: 2,
-		src: "https://www.youtube.com/embed/LzIZEt-d-mM?si=Y-xDW5bZhmQ4SUfE",
-		title: "Div 2 - Rnd 3 - Saudi Arabia",
+		src: "https://www.youtube.com/embed/fIL6eGbmG3U?si=L4XLqdS6yGCsTtP5",
+		title: "Div 2 - Rnd 4 - Hungary",
 	},
 	{
 		id: 3,
-		src: "https://www.youtube.com/embed/LVnmgxIaej0?si=vKdASH6dCwdd-v3H",
-		title: "Div 3 - Rnd 3 - Saudi Arabia",
+		src: "https://www.youtube.com/embed/xekezTTKkIE?si=bd99w_E4N-e7ofFP",
+		title: "Div 3 - Rnd 4 - Hungary",
 	},
 ];
 
