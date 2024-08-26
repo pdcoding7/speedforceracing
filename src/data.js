@@ -491,7 +491,7 @@ export const mergedStandingsConfig = [
 		wins: "",
 		podiums: "4",
 		fastest: "",
-		points: "33",
+		points: "133",
 	},
 	{
 		id: 22,
