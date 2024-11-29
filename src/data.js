@@ -224,17 +224,17 @@ export const gp1Slider = [
 export const streamConfig = [
 	{
 		id: 1,
-		src: "https://www.youtube.com/embed/qdfz1cUWnnY",
+		src: "https://www.youtube.com/embed/lAjPeb1VxDc",
 		title: "Div 1 - Rnd 21 - Japan",
 	},
 	{
 		id: 2,
-		src: "https://www.youtube.com/embed/h-xc5r_zbB8",
+		src: "https://www.youtube.com/embed/QmV6dXX-fN4",
 		title: "Div 2 - Rnd 21 - Japan",
 	},
 	{
 		id: 3,
-		src: "https://www.youtube.com/embed/KKgvAVzfTOI",
+		src: "https://www.youtube.com/embed/6w395f0PZSs",
 		title: "Div 3 - Rnd 20 - Japan",
 	},
 ];
