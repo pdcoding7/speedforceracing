@@ -224,7 +224,7 @@ export const gp1Slider = [
 export const streamConfig = [
 	{
 		id: 1,
-		src: "https://www.youtube.com/embed/feLyOg8",
+		src: "https://www.youtube.com/embed/ND67feLyOg8",
 		title: "Div 1 - Rnd 24 - Abu Dhabi",
 	},
 	{
