@@ -59,16 +59,16 @@ const Standings = () => {
 							</>
 						),
 					},
-					{
-						id: 5,
-						tabTitle: "OVR",
-						content: (
-							<>
-								<DivisionTitle division="Cross Div" typeOf="- Constructors Standings" />
-								<StandingsOverallComponent />
-							</>
-						),
-					},
+					// {
+					// 	id: 5,
+					// 	tabTitle: "OVR",
+					// 	content: (
+					// 		<>
+					// 			<DivisionTitle division="Cross Div" typeOf="- Constructors Standings" />
+					// 			<StandingsOverallComponent />
+					// 		</>
+					// 	),
+					// },
 				]}
 			/>
 		</section>
