@@ -625,7 +625,7 @@ h2.sectionHeader {margin-bottom:0;}
           .tabs {     
             width: min-content;
             justify-content: center;
-            gap: 1.5vw;}
+            gap: 2.5vw;}
 
             #calendar .tabs button {padding:8%;}
             #calendar .tabs {     
