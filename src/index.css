@@ -601,7 +601,6 @@ h2.sectionHeader {margin-bottom:0;}
       #calendar .tabs {     
         justify-content: space-evenly;
         display: flex;
-        width: 25vw;
         gap: 0vw;
         margin: 3vw auto;}
 
@@ -614,9 +613,9 @@ h2.sectionHeader {margin-bottom:0;}
         
         @media screen and (max-width: 900px) {
           #calendar .tabs {     
-            gap:2.5vw;
+            gap:1.5vw;
             justify-content: center;
-            width:60vw;
+            width: min-content;
         }
       } 
 
@@ -624,13 +623,13 @@ h2.sectionHeader {margin-bottom:0;}
           .tabs button {font-size:20px; padding:6%; margin-bottom: 4vw;}
           .tabs button:disabled {font-size:20px; padding:6%;}
           .tabs {     
-            width: 60%;
+            width: min-content;
             justify-content: center;
-            gap: 2.5vw;}
+            gap: 1.5vw;}
 
             #calendar .tabs button {padding:8%;}
             #calendar .tabs {     
-              gap: 4vw;}
+              gap: 2.5vw;}
         }
 
         #calendar .welcomeImage {width:50%; margin: 4% auto;}
