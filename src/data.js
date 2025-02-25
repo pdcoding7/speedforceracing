@@ -188,7 +188,7 @@ export const streamConfig = [
 	{
 		id: 4,
 		src: "https://www.youtube.com/embed/p20-eKmJbzY",
-		title: "Div 4 - Rnd Rnd 5 - Belgium",
+		title: "Div 4 - Rnd 5 - Belgium",
 	},
 ];
 
