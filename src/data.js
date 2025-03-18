@@ -655,7 +655,7 @@ export const mergedStandingsConfig = [
 	},
 	{
 		id: 39,
-		position: "25",
+		position: "19",
 		league: 2,
 		name: "Tigerbuca",
 		team: "Red Bull",
