@@ -154,16 +154,21 @@ export const hofConfig = [
 export const gp1Slider = [
 	{
 		id: 1,
+		imgPath: "/images/img-vicar-new.jpg",
+		desc: "SFR_thevicar finds himself in a Haas sandwhich as he works his way through the field for P4 in Japan",
+	},
+	{
+		id: 2,
 		imgPath: "/images/lights-out.jpg",
 		desc: "And it's lights out and away we go at Bahrain for the opening race of Season 14!",
 	},
 	{
-		id: 2,
+		id: 3,
 		imgPath: "/images/kierannn.jpg",
 		desc: "The McLaren of Kierannnn_88 in the lead of the Bahrain GP, with his teammate in tow - Bahrain Rnd 1",
 	},
 	{
-		id: 3,
+		id: 4,
 		imgPath: "/images/alpha-line.jpg",
 		desc: "RogueSmithy dragging his car home as he runs out of fuel - Bahrain Rnd 1",
 	},
