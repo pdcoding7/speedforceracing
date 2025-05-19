@@ -34,55 +34,46 @@ const sheets = google.sheets({ version: 'v4', auth });
 // API endpoint to fetch data from Google Sheets
 app.get('/api/sheets-data', async (req, res) => {
   try {
-    console.log('Attempting to fetch spreadsheet data...');
-    console.log('Spreadsheet ID:', process.env.SPREADSHEET_ID);
-    console.log('Range:', 'Div 1!C7:H26');
-
-    // First, let's get the sheet names to verify what's available
+    const sheets = google.sheets({ version: 'v4', auth });
+    
+    // Get the sheet names
     const spreadsheet = await sheets.spreadsheets.get({
       spreadsheetId: process.env.SPREADSHEET_ID,
     });
-
     console.log('Available sheets:', spreadsheet.data.sheets.map(sheet => sheet.properties.title));
 
-    // Try to fetch the data
-    const response = await sheets.spreadsheets.values.get({
-      spreadsheetId: process.env.SPREADSHEET_ID,
-      range: 'Div 1!C7:H26',
+    // Fetch both values and team names
+    const [valuesResponse, teamResponse] = await Promise.all([
+      sheets.spreadsheets.values.get({
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        range: 'Div 1!C7:H26',
+      }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        range: 'Div 1!AA7:AA26',
+      })
+    ]);
+
+    const values = valuesResponse.data.values || [];
+    const teams = teamResponse.data.values || [];
+
+    console.log('Team data received:', teams); // Debug log for team data
+
+    // Combine the data
+    const combinedData = values.map((row, index) => {
+      const teamName = teams[index] ? teams[index][0] : '';
+      console.log(`Row ${index + 1} team:`, teamName); // Debug log for each row's team
+      return {
+        ...row,
+        team: teamName
+      };
     });
 
-    if (!response.data.values) {
-      console.log('No data found in the specified range');
-      return res.json([]);
-    }
-
-    // Log the first few rows of data
-    console.log('Data received successfully');
-    console.log('First 5 rows of data:');
-    response.data.values.slice(0, 6).forEach((row, index) => {
-      console.log(`Row ${index + 1}:`, row);
-    });
-
-    res.json(response.data.values);
+    console.log('First few rows of combined data:', combinedData.slice(0, 3));
+    res.json(combinedData);
   } catch (error) {
-    console.error('Detailed error:', {
-      message: error.message,
-      code: error.code,
-      errors: error.errors,
-      response: error.response?.data,
-      stack: error.stack
-    });
-
-    // Check if it's an authentication error
-    if (error.code === 401) {
-      console.error('Authentication error. Please check your service account credentials.');
-    }
-
-    res.status(500).json({ 
-      error: 'Failed to fetch data from Google Sheets',
-      details: error.message,
-      code: error.code
-    });
+    console.error('Error fetching data:', error);
+    res.status(500).json({ error: 'Failed to fetch data' });
   }
 });
 

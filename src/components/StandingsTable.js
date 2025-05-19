@@ -34,10 +34,11 @@ const TableHeader = styled.h2`
 `;
 
 const StyledTable = styled(Table)`
-  background-color: white;
+  background-color: #f8f9fa;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin: 0;
   
   th {
     background-color: #000;
@@ -96,15 +97,19 @@ const StyledTable = styled(Table)`
   }
 
   tbody tr:nth-child(odd) {
-    background-color: #f8f9fa;
+    background-color: #fff;
   }
 
   tbody tr:nth-child(even) {
-    background-color: white;
+    background-color: #fff;
   }
 
   tbody tr:hover {
     background-color: #e9ecef;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
   }
 `;
 
@@ -153,18 +158,60 @@ const PodiumsCell = styled.td`
 const FLCell = styled.td`
   font-weight: 500;
   color: #fff;
-  background-color: #800080;
+  background-color: #B4009E;
 `;
 
 const TeamCell = styled.td`
   font-weight: 500;
-  color: #000
+  color: #000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white !important;
+  width: 5.5rem;
+  padding: 0.5rem;
+  img {
+    width:100%;
+    display: block;
+    margin: 0 auto;
+  }
 `;
 
 const PolesCell = styled.td`
   font-weight: 500;
   color: #000;
 `;
+
+const getTeamImage = (teamName) => {
+  if (!teamName) return null;
+  
+  const teamNameLower = teamName.toLowerCase().trim();
+  switch (teamNameLower) {
+    case 'alpine':
+      return '/images/team-alp.png';
+    case 'ferrari':
+      return '/images/team-fer.png';
+    case 'aston martin':
+      return '/images/team-am.png';
+    case 'mercedes':
+      return '/images/team-merc.png';
+    case 'williams':
+      return '/images/team-will.png';
+    case 'visacashapp':
+       return '/images/team-visa.png';
+    case 'haas':
+      return '/images/team-haas.png';
+    case 'red bull':
+      return '/images/team-rb.png';
+    case 'mclaren':
+      return '/images/team-mcl.png';
+    case 'kick sauber':
+      return '/images/team-kick.png';
+    default:
+      return null;
+  }
+};
 
 const StandingsTable = () => {
   const [standings, setStandings] = useState([]);
@@ -194,6 +241,7 @@ const StandingsTable = () => {
         const data = await response.json();
         console.log('Data received:', data);
         console.log('First row sample:', data[0]);
+        console.log('Team data in first row:', data[0]?.team);
         setStandings(data);
         setLoading(false);
       } catch (err) {
@@ -227,7 +275,7 @@ const StandingsTable = () => {
       <StyledTable striped bordered hover responsive>
         <thead>
           <tr>
-            <th style={{ width: '50px' }}>
+            <th>
               <img 
                 src="/images/sftlogo-2white.png" 
                 alt="SFR Logo" 
@@ -250,7 +298,15 @@ const StandingsTable = () => {
             <tr key={rowIndex}>
               <PositionCell>{rowIndex + 1}</PositionCell>
               <DriverCell>{row[0]}</DriverCell>
-              <TeamCell></TeamCell>
+              <TeamCell>
+                {getTeamImage(row.team) && (
+                  <img 
+                    src={getTeamImage(row.team)} 
+                    alt={row.team} 
+                    title={row.team}
+                  />
+                )}
+              </TeamCell>
               <WinsCell>{row[2]}</WinsCell>
               <PodiumsCell>{row[3]}</PodiumsCell>
               <PolesCell>{row[5]}</PolesCell>
