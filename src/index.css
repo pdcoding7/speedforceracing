@@ -557,6 +557,11 @@ h2.sectionHeader {margin-bottom:0;}
         #standings .constructorsImg {width: 95%;}
       }
 
+      .table-responsive {
+        display: flex;
+        justify-content: center;
+      }
+
       .tabs {     
         justify-content: space-evenly;
         display: flex;
