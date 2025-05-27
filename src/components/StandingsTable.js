@@ -49,6 +49,7 @@ const StyledTable = styled(Table)`
     border: none;
     text-align: center;
     font-size: 0.9rem;
+    img {width:4rem;}
     
     &:first-child {
       border-top-left-radius: 8px;
@@ -58,39 +59,26 @@ const StyledTable = styled(Table)`
       border-top-right-radius: 8px;
     }
 
-    @media (max-width: 707px) {
-      &:nth-child(4),
-      &:nth-child(5),
-      &:nth-child(6),
-      &:nth-child(7) {
-        display: none;
-      }
+    @media (max-width: 755px) {
+     img {width:3rem;}
+     padding: 0.5rem;
     }
   }
   
   td {
     vertical-align: middle;
-    padding: 1rem;
+    padding: 0.5rem;
     border-bottom: 1px solid #f0f0f0;
     text-align: center;
     transition: background-color 0.2s ease;
     font-size: 0.9rem;
 
-    @media (max-width: 707px) {
-      &:nth-child(4),
-      &:nth-child(5),
-      &:nth-child(6),
-      &:nth-child(7) {
-        display: none;
-      }
+    @media (max-width: 755px) {
+      padding: 0.05rem;
     }
   }
   
   tr {
-    &:hover {
-      background-color: #f8f9fa;
-    }
-    
     &:last-child td {
       border-bottom: none;
     }
@@ -104,12 +92,32 @@ const StyledTable = styled(Table)`
     background-color: #fff;
   }
 
-  tbody tr:hover {
-    background-color: #e9ecef;
-  }
-
   @media (max-width: 768px) {
     font-size: 0.9rem;
+  }
+`;
+
+const DriverStandingsTable = styled(StyledTable)`
+  th {
+    @media (max-width: 755px) {
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        display: none;
+      }
+    }
+  }
+  
+  td {
+    @media (max-width: 755px) {
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        display: none;
+      }
+    }
   }
 `;
 
@@ -172,9 +180,12 @@ const TeamCell = styled.td`
   width: 5.5rem;
   padding: 0.5rem;
   img {
-    width:100%;
+    width: 100%;
     display: block;
     margin: 0 auto;
+    @media (max-width: 755px) {
+      width: 80%;
+    }
   }
 `;
 
@@ -198,11 +209,11 @@ const getTeamImage = (teamName) => {
       return '/images/team-merc.png';
     case 'williams':
       return '/images/team-will.png';
-    case 'visacashapp':
+    case 'visa rb':
        return '/images/team-visa.png';
     case 'haas':
       return '/images/team-haas.png';
-    case 'red bull':
+    case 'redbull':
       return '/images/team-rb.png';
     case 'mclaren':
       return '/images/team-mcl.png';
@@ -215,6 +226,7 @@ const getTeamImage = (teamName) => {
 
 const StandingsTable = () => {
   const [standings, setStandings] = useState([]);
+  const [teamStandings, setTeamStandings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -239,10 +251,17 @@ const StandingsTable = () => {
         }
         
         const data = await response.json();
-        console.log('Data received:', data);
-        console.log('First row sample:', data[0]);
-        console.log('Team data in first row:', data[0]?.team);
-        setStandings(data);
+        console.log('Full data received:', data);
+        
+        // Split the data into driver and team standings
+        const driverData = data.slice(0, 20); // First 20 rows for driver standings
+        const teamData = data.slice(20); // Remaining rows for team standings
+        
+        console.log('Driver data:', driverData);
+        console.log('Team data:', teamData);
+        
+        setStandings(driverData);
+        setTeamStandings(teamData);
         setLoading(false);
       } catch (err) {
         console.error('Fetch error:', err);
@@ -272,16 +291,13 @@ const StandingsTable = () => {
     <section className="section">
       <SectionTitle sectionTitle="Standings"></SectionTitle>
       <DivisionTitle division="Division 1" typeOf="- Driver Standings" />
-      <StyledTable striped bordered hover responsive>
+      <DriverStandingsTable striped bordered hover responsive>
         <thead>
           <tr>
             <th>
               <img 
                 src="/images/sftlogo-2white.png" 
                 alt="SFR Logo" 
-                style={{ 
-                  width: '4rem', 
-                }} 
               />
             </th>
             <th>Driver</th>
@@ -307,13 +323,59 @@ const StandingsTable = () => {
                   />
                 )}
               </TeamCell>
-              <WinsCell>{row[2]}</WinsCell>
-              <PodiumsCell>{row[3]}</PodiumsCell>
+              <WinsCell>{row[2] === '0' ? '' : row[2]}</WinsCell>
+              <PodiumsCell>{row[3] === '0' ? '' : row[3]}</PodiumsCell>
               <PolesCell>{row[5]}</PolesCell>
               <FLCell>{row[4]}</FLCell>
               <PointsCell>{row[1]}</PointsCell>
             </tr>
           ))}
+        </tbody>
+      </DriverStandingsTable>
+
+      <DivisionTitle division="Division 1" typeOf="- Team Standings" />
+      <StyledTable striped bordered hover responsive>
+        <thead>
+          <tr>
+            <th>
+              <img 
+                src="/images/sftlogo-2white.png" 
+                alt="SFR Logo" 
+              />
+            </th>
+            <th>Team</th>
+            <th>Wins</th>
+            <th>Podiums</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          {teamStandings && teamStandings.length > 0 ? (
+            teamStandings.map((row, rowIndex) => {
+              console.log('Rendering team row:', row);
+              return (
+                <tr key={rowIndex}>
+                  <PositionCell>{rowIndex + 1}</PositionCell>
+                  <TeamCell>
+                    {getTeamImage(row[2]) && (
+                      <img 
+                        src={getTeamImage(row[2])} 
+                        alt={row[2]} 
+                        title={row[2]}
+                      />
+                    )}
+                  </TeamCell>
+                  <WinsCell>{row[4]}</WinsCell>
+                  <PodiumsCell>{row[5]}</PodiumsCell>
+                  <PointsCell>{row[3]}</PointsCell>
+                </tr>
+              );
+            })
+          ) : (
+            <tr>
+              <td colSpan="5" style={{ textAlign: 'center' }}>No team standings data available</td>
+            </tr>
+          )}
         </tbody>
       </StyledTable>
     </section>

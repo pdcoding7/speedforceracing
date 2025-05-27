@@ -42,11 +42,15 @@ app.get('/api/sheets-data', async (req, res) => {
     });
     console.log('Available sheets:', spreadsheet.data.sheets.map(sheet => sheet.properties.title));
 
-    // Fetch both values and team names
-    const [valuesResponse, teamResponse] = await Promise.all([
+    // Fetch both driver and team standings data
+    const [driverValuesResponse, teamValuesResponse, teamResponse] = await Promise.all([
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
         range: 'Div 1!C7:H26',
+      }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        range: 'Div 1!A29:F38',
       }),
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
@@ -54,20 +58,29 @@ app.get('/api/sheets-data', async (req, res) => {
       })
     ]);
 
-    const values = valuesResponse.data.values || [];
+    const driverValues = driverValuesResponse.data.values || [];
+    const teamValues = teamValuesResponse.data.values || [];
     const teams = teamResponse.data.values || [];
 
-    console.log('Team data received:', teams); // Debug log for team data
+    console.log('Team standings data received:', teamValues); // Debug log for team data
 
-    // Combine the data
-    const combinedData = values.map((row, index) => {
+    // Combine the driver data
+    const driverData = driverValues.map((row, index) => {
       const teamName = teams[index] ? teams[index][0] : '';
-      console.log(`Row ${index + 1} team:`, teamName); // Debug log for each row's team
       return {
         ...row,
         team: teamName
       };
     });
+
+    // Combine the team data
+    const teamData = teamValues.map(row => ({
+      ...row,
+      team: row[0] // Assuming team name is in the first column
+    }));
+
+    // Combine both datasets
+    const combinedData = [...driverData, ...teamData];
 
     console.log('First few rows of combined data:', combinedData.slice(0, 3));
     res.json(combinedData);

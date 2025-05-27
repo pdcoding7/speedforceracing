@@ -547,7 +547,7 @@ h2.sectionHeader {margin-bottom:0;}
         #standings p {line-height: 22px;}
       }
 
-      @media screen and (max-width: 700px) {
+      @media (max-width: 707px) {
         #standings .indivTable h5 {display: none;}
         #standings .indivTable th {min-width: 3.5rem;}
         #standings .indivTable .driverList {width:11rem;}
@@ -555,6 +555,7 @@ h2.sectionHeader {margin-bottom:0;}
         #standings table {width:90%;}
         #standings .standingsImg {width: 95%;}
         #standings .constructorsImg {width: 95%;}
+        #standings .teamImg img {width: 80%;}
       }
 
       .table-responsive {
