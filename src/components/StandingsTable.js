@@ -288,7 +288,7 @@ const StandingsTable = () => {
   }
 
   return (
-    <section className="section">
+    <section className="section" id="standingsNew">
       <SectionTitle sectionTitle="Standings"></SectionTitle>
       <DivisionTitle division="Division 1" typeOf="- Driver Standings" />
       <DriverStandingsTable striped bordered hover responsive>
