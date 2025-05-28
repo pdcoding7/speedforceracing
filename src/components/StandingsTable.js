@@ -184,7 +184,7 @@ const TeamCell = styled.td`
     display: block;
     margin: 0 auto;
     @media (max-width: 755px) {
-      width: 80%;
+      width: 75%;
     }
   }
 `;
@@ -206,7 +206,6 @@ const TabsContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 0.25rem;
   }
 `;
 
@@ -218,8 +217,8 @@ const TabRow = styled.div`
 
 const Tab = styled.button`
   padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: ${props => props.active ? '#fff' : 'rgba(255, 255, 255, 0.7)'};
   background: none;
   border: none;
@@ -231,19 +230,19 @@ const Tab = styled.button`
   position: relative;
 
   &:hover {
-    color: #fff;
     border-bottom: 3px solid #fff;
+    color: #fff;
   }
 
   @media (max-width: 768px) {
     padding: 0.75rem 1.25rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin: 0;
   }
 
   @media (max-width: 480px) {
     padding: 0.5rem 1rem;
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 `;
 
@@ -393,7 +392,7 @@ const StandingsTable = () => {
       </TabsContainer>
 
       <TabContent active={activeTab === 1}>
-        <DivisionTitle division="Division 1" typeOf="- Driver Standings" />
+        <DivisionTitle typeOf="Driver Standings" />
         <DriverStandingsTable striped bordered hover responsive>
           <thead>
             <tr>
@@ -436,7 +435,7 @@ const StandingsTable = () => {
           </tbody>
         </DriverStandingsTable>
 
-        <DivisionTitle division="Division 1" typeOf="- Team Standings" />
+        <DivisionTitle typeOf="Team Standings" />
         <StyledTable striped bordered hover responsive>
           <thead>
             <tr>
