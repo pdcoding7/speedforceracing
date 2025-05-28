@@ -47,3 +47,17 @@ src/sfrps4-fc42c28e8c96.json
 *.tmp
 *.temp
 node_modules/
+
+# Additional security patterns
+**/credentials.json
+**/service-account*.json
+**/private-key*.json
+**/api-keys.json
+**/config.json
+**/secrets.json
+**/auth.json
+**/keys.json
+**/certificates/
+**/keys/
+**/secrets/
+**/credentials/
