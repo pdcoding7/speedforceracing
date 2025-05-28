@@ -425,7 +425,7 @@ h2.sectionHeader {margin-bottom:0;}
   .typeTitle {color:var(--clr-white); width:88%; margin:auto; text-align: center; margin-bottom: 32px;}    
 
   @media screen and (max-width: 800px) {
-  .typeTitle {margin-bottom: 32px;}    
+  .typeTitle {margin-bottom: 24px;}    
   }
 
   #standings table {

@@ -61,7 +61,7 @@ const StyledTable = styled(Table)`
 
     @media (max-width: 755px) {
      img {width:3rem;}
-     padding: 0.4rem;
+     padding: 0.5rem;
      &:nth-child(4) {
        display: none;
      }
