@@ -1,5 +1,5 @@
 const { google } = require("googleapis");
-const keys = require("./path/to/your/credentials.json");
+const keys = require("./sfrps4-fc42c28e8c96.json");
 
 // Create a new JWT client using the credentials
 const client = new google.auth.JWT(keys.client_email, null, keys.private_key, ["https://www.googleapis.com/auth/spreadsheets"]);

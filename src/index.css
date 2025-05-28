@@ -7,7 +7,7 @@ Variables
   --clr-white: #fff;
   --clr-black: #000;
   --transition: all 0.3s linear; 
-  --spacing: 0.1rem;
+  --spacing: 0.05rem;
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -57,7 +57,7 @@ h1 {
   font-size: 3rem;
 }
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 h3 {
   font-size: 1.25rem;
@@ -375,8 +375,8 @@ h2.sectionHeader {margin-bottom:0;}
   }
   /* Video */
   #pastStreams h2 {color:#000; margin:auto; text-align: center;}  
-  #pastStreams .flexDiv h2 {margin-bottom:32px;}
-  #pastStreams .flexDiv {margin-bottom: 64px;} 
+  #pastStreams .flexDiv h2 {margin-bottom:16px;}
+  #pastStreams .flexDiv {margin-bottom: 32px;} 
   #pastStreams .videoContainer {
     position: relative;
     padding-bottom:33%;
@@ -425,7 +425,7 @@ h2.sectionHeader {margin-bottom:0;}
   .typeTitle {color:var(--clr-white); width:88%; margin:auto; text-align: center; margin-bottom: 32px;}    
 
   @media screen and (max-width: 800px) {
-  .typeTitle {margin-bottom: 32px;}    
+  .typeTitle {margin-bottom: 24px;}    
   }
 
   #standings table {
@@ -547,7 +547,7 @@ h2.sectionHeader {margin-bottom:0;}
         #standings p {line-height: 22px;}
       }
 
-      @media screen and (max-width: 700px) {
+      @media (max-width: 707px) {
         #standings .indivTable h5 {display: none;}
         #standings .indivTable th {min-width: 3.5rem;}
         #standings .indivTable .driverList {width:11rem;}
@@ -555,6 +555,14 @@ h2.sectionHeader {margin-bottom:0;}
         #standings table {width:90%;}
         #standings .standingsImg {width: 95%;}
         #standings .constructorsImg {width: 95%;}
+        #standings .teamImg img {width: 80%;}
+      }
+
+      .table-responsive {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+        
       }
 
       .tabs {     
@@ -630,6 +638,11 @@ h2.sectionHeader {margin-bottom:0;}
             #calendar .tabs button {padding:8%;}
             #calendar .tabs {     
               gap: 2.5vw;}
+
+              .table-responsive {
+                margin-bottom: 2rem;
+                
+              }
         }
 
         #calendar .welcomeImage {width:50%; margin: 4% auto;}

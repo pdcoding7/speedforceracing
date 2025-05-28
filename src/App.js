@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Standings from "./components/Standings";
+import StandingsTable from "./components/StandingsTable";
 import PastStreams from "./components/PastStreams";
 import Gallery from "./components/Gallery";
 import HallOfFame from "./components/HallOfFame";
@@ -13,11 +14,12 @@ function App() {
 			<Navbar></Navbar>
 			<Hero />
 			<Calendar />
-			<Standings />
+			<StandingsTable />
+			{/* <Standings /> */}
 			<PastStreams />
 			<Gallery />
 			<HallOfFame />
-			<Footer />
+			<Footer />			
 		</>
 	);
 }
