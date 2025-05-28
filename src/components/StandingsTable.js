@@ -61,7 +61,10 @@ const StyledTable = styled(Table)`
 
     @media (max-width: 755px) {
      img {width:3rem;}
-     padding: 0.5rem;
+     padding: 0.4rem;
+     &:nth-child(4) {
+       display: none;
+     }
     }
   }
   
@@ -75,6 +78,9 @@ const StyledTable = styled(Table)`
 
     @media (max-width: 755px) {
       padding: 0.05rem;
+      &:nth-child(4) {
+        display: none;
+      }
     }
   }
   
@@ -140,33 +146,50 @@ const ErrorMessage = styled.div`
 
 const PositionCell = styled.td`
   font-weight: 600;
-  color: #000
+  color: #000;
+  width: 60px;
+  text-align: center;
 `;
 
 const DriverCell = styled.td`
   font-weight: 500;
-  color: #000
+  color: #000;
+  min-width: 120px;
+  text-align: left;
 `;
 
 const PointsCell = styled.td`
   font-weight: 600;
-  color: #000
+  color: #000;
+  width: 80px;
+  text-align: center;
+
+  @media (max-width: 755px) {
+    width: max-content;
+    padding: 0.5rem;
+  }
 `;
 
 const WinsCell = styled.td`
   font-weight: 600;
   color: #000;
+  width: 80px;
+  text-align: center;
 `;
 
 const PodiumsCell = styled.td`
   font-weight: 500;
-  color: #000
+  color: #000;
+  width: 80px;
+  text-align: center;
 `;
 
 const FLCell = styled.td`
   font-weight: 500;
   color: #fff;
   background-color: #B4009E;
+  width: max-content;
+  text-align: center;
 `;
 
 const TeamCell = styled.td`
@@ -192,6 +215,8 @@ const TeamCell = styled.td`
 const PolesCell = styled.td`
   font-weight: 500;
   color: #000;
+  width: 80px;
+  text-align: center;
 `;
 
 const TabsContainer = styled.div`
@@ -295,6 +320,12 @@ const getTeamImage = (teamName) => {
 const StandingsTable = () => {
   const [standings, setStandings] = useState([]);
   const [teamStandings, setTeamStandings] = useState([]);
+  const [div2Standings, setDiv2Standings] = useState([]);
+  const [div2TeamStandings, setDiv2TeamStandings] = useState([]);
+  const [div3Standings, setDiv3Standings] = useState([]);
+  const [div3TeamStandings, setDiv3TeamStandings] = useState([]);
+  const [div4Standings, setDiv4Standings] = useState([]);
+  const [div4TeamStandings, setDiv4TeamStandings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeTab, setActiveTab] = useState(1);
@@ -302,7 +333,6 @@ const StandingsTable = () => {
   useEffect(() => {
     const fetchStandings = async () => {
       try {
-        console.log('Attempting to fetch data...');
         const response = await fetch('http://localhost:5000/api/sheets-data', {
           method: 'GET',
           headers: {
@@ -312,25 +342,37 @@ const StandingsTable = () => {
           mode: 'cors',
         });
         
-        console.log('Response status:', response.status);
-        
         if (!response.ok) {
           const errorData = await response.json().catch(() => ({}));
           throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
         }
         
         const data = await response.json();
-        console.log('Full data received:', data);
         
-        // Split the data into driver and team standings
+        // Split the data into driver and team standings for Div 1
         const driverData = data.slice(0, 20); // First 20 rows for driver standings
-        const teamData = data.slice(20); // Remaining rows for team standings
+        const teamData = data.slice(20, 30); // Next 10 rows for team standings
         
-        console.log('Driver data:', driverData);
-        console.log('Team data:', teamData);
+        // Split the data into driver and team standings for Div 2
+        const div2DriverData = data.slice(30, 50); // Next 20 rows for Div 2 driver standings
+        const div2TeamData = data.slice(50, 60); // Next 10 rows for Div 2 team standings
+        
+        // Split the data into driver and team standings for Div 3
+        const div3DriverData = data.slice(60, 80); // Next 20 rows for Div 3 driver standings
+        const div3TeamData = data.slice(80, 90); // Next 10 rows for Div 3 team standings
+        
+        // Split the data into driver and team standings for Div 4
+        const div4DriverData = data.slice(90, 110); // Next 20 rows for Div 4 driver standings
+        const div4TeamData = data.slice(110, 120); // Next 10 rows for Div 4 team standings
         
         setStandings(driverData);
         setTeamStandings(teamData);
+        setDiv2Standings(div2DriverData);
+        setDiv2TeamStandings(div2TeamData);
+        setDiv3Standings(div3DriverData);
+        setDiv3TeamStandings(div3TeamData);
+        setDiv4Standings(div4DriverData);
+        setDiv4TeamStandings(div4TeamData);
         setLoading(false);
       } catch (err) {
         console.error('Fetch error:', err);
@@ -355,6 +397,372 @@ const StandingsTable = () => {
   if (error) {
     return <ErrorMessage>Error: {error}</ErrorMessage>;
   }
+
+  const renderDiv1Standings = () => (
+    <>
+      <DivisionTitle typeOf="Drivers' Championship" />
+      <DriverStandingsTable striped bordered hover responsive>
+        <thead>
+          <tr>
+            <th>
+              <img 
+                src="/images/sftlogo-2white.png" 
+                alt="SFR Logo" 
+              />
+            </th>
+            <th>Driver</th>
+            <th>Team</th>
+            <th>Wins</th>
+            <th>Podiums</th>
+            <th>Poles</th>
+            <th>FL</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          {standings.filter(row => row[0] && row[0].trim() !== '').map((row, rowIndex) => (
+            <tr key={rowIndex}>
+              <PositionCell>{rowIndex + 1}</PositionCell>
+              <DriverCell>{row[0]}</DriverCell>
+              <TeamCell>
+                {getTeamImage(row.team) && (
+                  <img 
+                    src={getTeamImage(row.team)} 
+                    alt={row.team} 
+                    title={row.team}
+                  />
+                )}
+              </TeamCell>
+              <WinsCell>{row[2] === '0' ? '' : row[2]}</WinsCell>
+              <PodiumsCell>{row[3] === '0' ? '' : row[3]}</PodiumsCell>
+              <PolesCell>{row[5]}</PolesCell>
+              <FLCell>{row[4]}</FLCell>
+              <PointsCell>{row[1]}</PointsCell>
+            </tr>
+          ))}
+        </tbody>
+      </DriverStandingsTable>
+
+      <DivisionTitle typeOf="Constructors' Championship" />
+      <StyledTable striped bordered hover responsive>
+        <thead>
+          <tr>
+            <th>
+              <img 
+                src="/images/sftlogo-2white.png" 
+                alt="SFR Logo" 
+              />
+            </th>
+            <th>Team</th>
+            <th>Wins</th>
+            <th>Podiums</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          {teamStandings && teamStandings.length > 0 ? (
+            teamStandings.map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                <PositionCell>{rowIndex + 1}</PositionCell>
+                <TeamCell>
+                  {getTeamImage(row[2]) && (
+                    <img 
+                      src={getTeamImage(row[2])} 
+                      alt={row[2]} 
+                      title={row[2]}
+                    />
+                  )}
+                </TeamCell>
+                <WinsCell>{row[4]}</WinsCell>
+                <PodiumsCell>{row[5]}</PodiumsCell>
+                <PointsCell>{row[3]}</PointsCell>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="5" style={{ textAlign: 'center' }}>No team standings data available</td>
+            </tr>
+          )}
+        </tbody>
+      </StyledTable>
+    </>
+  );
+
+  const renderDiv2Standings = () => {
+    return (
+      <>
+        <DivisionTitle typeOf="Drivers' Championship" />
+        <DriverStandingsTable striped bordered hover responsive>
+          <thead>
+            <tr>
+              <th>
+                <img 
+                  src="/images/sftlogo-2white.png" 
+                  alt="SFR Logo" 
+                />
+              </th>
+              <th>Driver</th>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Podiums</th>
+              <th>Poles</th>
+              <th>FL</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {div2Standings && div2Standings.filter(row => row[0] && row[0].trim() !== '').map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                <PositionCell>{rowIndex + 1}</PositionCell>
+                <DriverCell>{row[0]}</DriverCell>
+                <TeamCell>
+                  {getTeamImage(row.team) && (
+                    <img 
+                      src={getTeamImage(row.team)} 
+                      alt={row.team} 
+                      title={row.team}
+                    />
+                  )}
+                </TeamCell>
+                <WinsCell>{row[2] === '0' ? '' : row[2]}</WinsCell>
+                <PodiumsCell>{row[3] === '0' ? '' : row[3]}</PodiumsCell>
+                <PolesCell>{row[5]}</PolesCell>
+                <FLCell>{row[4]}</FLCell>
+                <PointsCell>{row[1]}</PointsCell>
+              </tr>
+            ))}
+          </tbody>
+        </DriverStandingsTable>
+
+        <DivisionTitle typeOf="Constructors' Championship" />
+        <StyledTable striped bordered hover responsive>
+          <thead>
+            <tr>
+              <th>
+                <img 
+                  src="/images/sftlogo-2white.png" 
+                  alt="SFR Logo" 
+                />
+              </th>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Podiums</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {div2TeamStandings && div2TeamStandings.length > 0 ? (
+              div2TeamStandings.map((row, rowIndex) => (
+                <tr key={rowIndex}>
+                  <PositionCell>{rowIndex + 1}</PositionCell>
+                  <TeamCell>
+                    {getTeamImage(row[2]) && (
+                      <img 
+                        src={getTeamImage(row[2])} 
+                        alt={row[2]} 
+                        title={row[2]}
+                      />
+                    )}
+                  </TeamCell>
+                  <WinsCell>{row[4]}</WinsCell>
+                  <PodiumsCell>{row[5]}</PodiumsCell>
+                  <PointsCell>{row[3]}</PointsCell>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="5" style={{ textAlign: 'center' }}>No team standings data available</td>
+              </tr>
+            )}
+          </tbody>
+        </StyledTable>
+      </>
+    );
+  };
+
+  const renderDiv3Standings = () => {
+    return (
+      <>
+        <DivisionTitle typeOf="Drivers' Championship" />
+        <DriverStandingsTable striped bordered hover responsive>
+          <thead>
+            <tr>
+              <th>
+                <img 
+                  src="/images/sftlogo-2white.png" 
+                  alt="SFR Logo" 
+                />
+              </th>
+              <th>Driver</th>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Podiums</th>
+              <th>Poles</th>
+              <th>FL</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {div3Standings && div3Standings.filter(row => row[0] && row[0].trim() !== '').map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                <PositionCell>{rowIndex + 1}</PositionCell>
+                <DriverCell>{row[0]}</DriverCell>
+                <TeamCell>
+                  {getTeamImage(row.team) && (
+                    <img 
+                      src={getTeamImage(row.team)} 
+                      alt={row.team} 
+                      title={row.team}
+                    />
+                  )}
+                </TeamCell>
+                <WinsCell>{row[2] === '0' ? '' : row[2]}</WinsCell>
+                <PodiumsCell>{row[3] === '0' ? '' : row[3]}</PodiumsCell>
+                <PolesCell>{row[5]}</PolesCell>
+                <FLCell>{row[4]}</FLCell>
+                <PointsCell>{row[1]}</PointsCell>
+              </tr>
+            ))}
+          </tbody>
+        </DriverStandingsTable>
+
+        <DivisionTitle typeOf="Constructors' Championship" />
+        <StyledTable striped bordered hover responsive>
+          <thead>
+            <tr>
+              <th>
+                <img 
+                  src="/images/sftlogo-2white.png" 
+                  alt="SFR Logo" 
+                />
+              </th>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Podiums</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {div3TeamStandings && div3TeamStandings.length > 0 ? (
+              div3TeamStandings.map((row, rowIndex) => (
+                <tr key={rowIndex}>
+                  <PositionCell>{rowIndex + 1}</PositionCell>
+                  <TeamCell>
+                    {getTeamImage(row[2]) && (
+                      <img 
+                        src={getTeamImage(row[2])} 
+                        alt={row[2]} 
+                        title={row[2]}
+                      />
+                    )}
+                  </TeamCell>
+                  <WinsCell>{row[4]}</WinsCell>
+                  <PodiumsCell>{row[5]}</PodiumsCell>
+                  <PointsCell>{row[3]}</PointsCell>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="5" style={{ textAlign: 'center' }}>No team standings data available</td>
+              </tr>
+            )}
+          </tbody>
+        </StyledTable>
+      </>
+    );
+  };
+
+  const renderDiv4Standings = () => {
+    return (
+      <>
+        <DivisionTitle typeOf="Drivers' Championship" />
+        <DriverStandingsTable striped bordered hover responsive>
+          <thead>
+            <tr>
+              <th>
+                <img 
+                  src="/images/sftlogo-2white.png" 
+                  alt="SFR Logo" 
+                />
+              </th>
+              <th>Driver</th>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Podiums</th>
+              <th>Poles</th>
+              <th>FL</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {div4Standings && div4Standings.filter(row => row[0] && row[0].trim() !== '').map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                <PositionCell>{rowIndex + 1}</PositionCell>
+                <DriverCell>{row[0]}</DriverCell>
+                <TeamCell>
+                  {getTeamImage(row.team) && (
+                    <img 
+                      src={getTeamImage(row.team)} 
+                      alt={row.team} 
+                      title={row.team}
+                    />
+                  )}
+                </TeamCell>
+                <WinsCell>{row[2] === '0' ? '' : row[2]}</WinsCell>
+                <PodiumsCell>{row[3] === '0' ? '' : row[3]}</PodiumsCell>
+                <PolesCell>{row[5]}</PolesCell>
+                <FLCell>{row[4]}</FLCell>
+                <PointsCell>{row[1]}</PointsCell>
+              </tr>
+            ))}
+          </tbody>
+        </DriverStandingsTable>
+
+        <DivisionTitle typeOf="Constructors' Championship" />
+        <StyledTable striped bordered hover responsive>
+          <thead>
+            <tr>
+              <th>
+                <img 
+                  src="/images/sftlogo-2white.png" 
+                  alt="SFR Logo" 
+                />
+              </th>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Podiums</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {div4TeamStandings && div4TeamStandings.length > 0 ? (
+              div4TeamStandings.map((row, rowIndex) => (
+                <tr key={rowIndex}>
+                  <PositionCell>{rowIndex + 1}</PositionCell>
+                  <TeamCell>
+                    {getTeamImage(row[2]) && (
+                      <img 
+                        src={getTeamImage(row[2])} 
+                        alt={row[2]} 
+                        title={row[2]}
+                      />
+                    )}
+                  </TeamCell>
+                  <WinsCell>{row[4]}</WinsCell>
+                  <PodiumsCell>{row[5]}</PodiumsCell>
+                  <PointsCell>{row[3]}</PointsCell>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="5" style={{ textAlign: 'center' }}>No team standings data available</td>
+              </tr>
+            )}
+          </tbody>
+        </StyledTable>
+      </>
+    );
+  };
 
   return (
     <section className="section" id="standingsNew">
@@ -392,106 +800,19 @@ const StandingsTable = () => {
       </TabsContainer>
 
       <TabContent active={activeTab === 1}>
-        <DivisionTitle typeOf="Driver Standings" />
-        <DriverStandingsTable striped bordered hover responsive>
-          <thead>
-            <tr>
-              <th>
-                <img 
-                  src="/images/sftlogo-2white.png" 
-                  alt="SFR Logo" 
-                />
-              </th>
-              <th>Driver</th>
-              <th>Team</th>
-              <th>Wins</th>
-              <th>Podiums</th>
-              <th>Poles</th>
-              <th>FL</th>
-              <th>Points</th>
-            </tr>
-          </thead>
-          <tbody>
-            {standings.map((row, rowIndex) => (
-              <tr key={rowIndex}>
-                <PositionCell>{rowIndex + 1}</PositionCell>
-                <DriverCell>{row[0]}</DriverCell>
-                <TeamCell>
-                  {getTeamImage(row.team) && (
-                    <img 
-                      src={getTeamImage(row.team)} 
-                      alt={row.team} 
-                      title={row.team}
-                    />
-                  )}
-                </TeamCell>
-                <WinsCell>{row[2] === '0' ? '' : row[2]}</WinsCell>
-                <PodiumsCell>{row[3] === '0' ? '' : row[3]}</PodiumsCell>
-                <PolesCell>{row[5]}</PolesCell>
-                <FLCell>{row[4]}</FLCell>
-                <PointsCell>{row[1]}</PointsCell>
-              </tr>
-            ))}
-          </tbody>
-        </DriverStandingsTable>
-
-        <DivisionTitle typeOf="Team Standings" />
-        <StyledTable striped bordered hover responsive>
-          <thead>
-            <tr>
-              <th>
-                <img 
-                  src="/images/sftlogo-2white.png" 
-                  alt="SFR Logo" 
-                />
-              </th>
-              <th>Team</th>
-              <th>Wins</th>
-              <th>Podiums</th>
-              <th>Points</th>
-            </tr>
-          </thead>
-          <tbody>
-            {teamStandings && teamStandings.length > 0 ? (
-              teamStandings.map((row, rowIndex) => {
-                console.log('Rendering team row:', row);
-                return (
-                  <tr key={rowIndex}>
-                    <PositionCell>{rowIndex + 1}</PositionCell>
-                    <TeamCell>
-                      {getTeamImage(row[2]) && (
-                        <img 
-                          src={getTeamImage(row[2])} 
-                          alt={row[2]} 
-                          title={row[2]}
-                        />
-                      )}
-                    </TeamCell>
-                    <WinsCell>{row[4]}</WinsCell>
-                    <PodiumsCell>{row[5]}</PodiumsCell>
-                    <PointsCell>{row[3]}</PointsCell>
-                  </tr>
-                );
-              })
-            ) : (
-              <tr>
-                <td colSpan="5" style={{ textAlign: 'center' }}>No team standings data available</td>
-              </tr>
-            )}
-          </tbody>
-        </StyledTable>
+        {renderDiv1Standings()}
       </TabContent>
 
       <TabContent active={activeTab === 2}>
-        <h3>Division 2 Content Coming Soon</h3>
+        {renderDiv2Standings()}
       </TabContent>
 
       <TabContent active={activeTab === 3}>
-        <h3>Division 3 Content Coming Soon</h3>
+        {renderDiv3Standings()}
       </TabContent>
 
       <TabContent active={activeTab === 4}>
-        <h3>Division 4 Content Coming Soon</h3>
+        {renderDiv4Standings()}
       </TabContent>
     </section>
   );

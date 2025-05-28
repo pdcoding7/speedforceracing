@@ -42,8 +42,11 @@ app.get('/api/sheets-data', async (req, res) => {
     });
     console.log('Available sheets:', spreadsheet.data.sheets.map(sheet => sheet.properties.title));
 
-    // Fetch both driver and team standings data
-    const [driverValuesResponse, teamValuesResponse, teamResponse] = await Promise.all([
+    // Fetch both driver and team standings data for Div 1, Div 2, Div 3, and Div 4
+    const [div1DriverValuesResponse, div1TeamValuesResponse, div1TeamResponse, 
+          div2DriverValuesResponse, div2TeamValuesResponse, div2TeamResponse,
+          div3DriverValuesResponse, div3TeamValuesResponse, div3TeamResponse,
+          div4DriverValuesResponse, div4TeamValuesResponse, div4TeamResponse] = await Promise.all([
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
         range: 'Div 1!C7:H26',
@@ -55,32 +58,129 @@ app.get('/api/sheets-data', async (req, res) => {
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
         range: 'Div 1!AA7:AA26',
+      }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        range: 'Div 2!C7:H26',
+      }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        range: 'Div 2!A29:F38',
+      }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        range: 'Div 2!AA7:AA26',
+      }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        range: 'Div 3!C7:H26',
+      }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        range: 'Div 3!A29:F38',
+      }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        range: 'Div 3!AA7:AA26',
+      }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        range: 'Div 4!C7:H26',
+      }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        range: 'Div 4!A29:F38',
+      }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        range: 'Div 4!AA7:AA26',
       })
     ]);
 
-    const driverValues = driverValuesResponse.data.values || [];
-    const teamValues = teamValuesResponse.data.values || [];
-    const teams = teamResponse.data.values || [];
+    const div1DriverValues = div1DriverValuesResponse.data.values || [];
+    const div1TeamValues = div1TeamValuesResponse.data.values || [];
+    const div1Teams = div1TeamResponse.data.values || [];
+    const div2DriverValues = div2DriverValuesResponse.data.values || [];
+    const div2TeamValues = div2TeamValuesResponse.data.values || [];
+    const div2Teams = div2TeamResponse.data.values || [];
+    const div3DriverValues = div3DriverValuesResponse.data.values || [];
+    const div3TeamValues = div3TeamValuesResponse.data.values || [];
+    const div3Teams = div3TeamResponse.data.values || [];
+    const div4DriverValues = div4DriverValuesResponse.data.values || [];
+    const div4TeamValues = div4TeamValuesResponse.data.values || [];
+    const div4Teams = div4TeamResponse.data.values || [];
 
-    console.log('Team standings data received:', teamValues); // Debug log for team data
-
-    // Combine the driver data
-    const driverData = driverValues.map((row, index) => {
-      const teamName = teams[index] ? teams[index][0] : '';
+    // Combine the driver data for Div 1
+    const div1DriverData = div1DriverValues.map((row, index) => {
+      const teamName = div1Teams[index] ? div1Teams[index][0] : '';
       return {
         ...row,
         team: teamName
       };
     });
 
-    // Combine the team data
-    const teamData = teamValues.map(row => ({
+    // Combine the team data for Div 1
+    const div1TeamData = div1TeamValues.map(row => ({
       ...row,
-      team: row[0] // Assuming team name is in the first column
+      team: row[0]
     }));
 
-    // Combine both datasets
-    const combinedData = [...driverData, ...teamData];
+    // Combine the driver data for Div 2
+    const div2DriverData = div2DriverValues.map((row, index) => {
+      const teamName = div2Teams[index] ? div2Teams[index][0] : '';
+      return {
+        ...row,
+        team: teamName
+      };
+    });
+
+    // Combine the team data for Div 2
+    const div2TeamData = div2TeamValues.map(row => ({
+      ...row,
+      team: row[0]
+    }));
+
+    // Combine the driver data for Div 3
+    const div3DriverData = div3DriverValues.map((row, index) => {
+      const teamName = div3Teams[index] ? div3Teams[index][0] : '';
+      return {
+        ...row,
+        team: teamName
+      };
+    });
+
+    // Combine the team data for Div 3
+    const div3TeamData = div3TeamValues.map(row => ({
+      ...row,
+      team: row[0]
+    }));
+
+    // Combine the driver data for Div 4
+    const div4DriverData = div4DriverValues.map((row, index) => {
+      const teamName = div4Teams[index] ? div4Teams[index][0] : '';
+      return {
+        ...row,
+        team: teamName
+      };
+    });
+
+    // Combine the team data for Div 4
+    const div4TeamData = div4TeamValues.map(row => ({
+      ...row,
+      team: row[0]
+    }));
+
+    // Combine all datasets in the correct order
+    const combinedData = [
+      ...div1DriverData,  // First 20 rows: Div 1 driver standings
+      ...div1TeamData,    // Next rows: Div 1 team standings
+      ...div2DriverData,  // Next 20 rows: Div 2 driver standings
+      ...div2TeamData,    // Next rows: Div 2 team standings
+      ...div3DriverData,  // Next 20 rows: Div 3 driver standings
+      ...div3TeamData,    // Next rows: Div 3 team standings
+      ...div4DriverData,  // Next 20 rows: Div 4 driver standings
+      ...div4TeamData     // Last rows: Div 4 team standings
+    ];
 
     console.log('First few rows of combined data:', combinedData.slice(0, 3));
     res.json(combinedData);
