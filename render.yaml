@@ -5,6 +5,7 @@ services:
     rootDir: backend
     buildCommand: npm install
     startCommand: npm start
+    branch: main
     envVars:
       - key: GOOGLE_CLIENT_EMAIL
         sync: false
