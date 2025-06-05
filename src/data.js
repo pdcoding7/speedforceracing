@@ -21,7 +21,7 @@ export const SidebarData = [
 	},
 	{
 		title: "Standings",
-		path: "#standingsNew",
+		path: "#standings",
 		icon: <IoIcons.IoIosPaper />,
 		iconClosed: <RiIcons.RiArrowDownSFill />,
 		iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -46,7 +46,7 @@ export const SidebarData = [
 export const pageLinks = [
 	{ id: 1, href: "#home", text: "home" },
 	{ id: 2, href: "#calendar", text: "calendar" },
-	{ id: 3, href: "#standingsNew", text: "standings" },
+	{ id: 3, href: "#standings", text: "standings" },
 	{ id: 4, href: "#pastStreams", text: "past streams" },
 	{ id: 5, href: "#gallery", text: "gallery" },
 	{ id: 6, href: "#hallOfFame", text: "hall of fame" },

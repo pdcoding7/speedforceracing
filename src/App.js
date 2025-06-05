@@ -1,5 +1,4 @@
 import Navbar from "./components/Navbar";
-import Standings from "./components/Standings";
 import StandingsTable from "./components/StandingsTable";
 import PastStreams from "./components/PastStreams";
 import Gallery from "./components/Gallery";
@@ -15,7 +14,6 @@ function App() {
 			<Hero />
 			<Calendar />
 			<StandingsTable />
-			{/* <Standings /> */}
 			<PastStreams />
 			<Gallery />
 			<HallOfFame />

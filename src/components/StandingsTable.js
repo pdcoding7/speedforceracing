@@ -766,7 +766,7 @@ const StandingsTable = () => {
   };
 
   return (
-    <section className="section" id="standingsNew">
+    <section className="section" id="standings">
       <SectionTitle sectionTitle="Standings"></SectionTitle>
       
       <TabsContainer>
