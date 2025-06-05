@@ -8,10 +8,10 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: true, // Allow all origins
-  credentials: true,
+  origin: ['http://localhost:3000', 'https://www.speedforceracing.co.uk', 'https://speedforceracing.co.uk'],
   methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Accept']
+  allowedHeaders: ['Content-Type', 'Accept'],
+  credentials: true
 }));
 app.use(express.json());
 
