@@ -333,7 +333,8 @@ const StandingsTable = () => {
   useEffect(() => {
     const fetchStandings = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/sheets-data', {
+        const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+        const response = await fetch(`${API_BASE_URL}/api/sheets-data`, {
           method: 'GET',
           headers: {
             'Accept': 'application/json',
