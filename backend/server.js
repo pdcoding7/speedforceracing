@@ -6,19 +6,13 @@ const { google } = require('googleapis');
 const app = express();
 const port = process.env.PORT || 5000;
 
-// CORS configuration
-const corsOptions = {
-  origin: [
-    'http://localhost:3000',
-    'https://speedforceracing.netlify.app',
-    'https://*.netlify.app'  // This allows all Netlify preview deployments
-  ],
+// Middleware
+app.use(cors({
+  origin: true, // Allow all origins
+  credentials: true,
   methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Accept'],
-  credentials: true
-};
-
-app.use(cors(corsOptions));
+  allowedHeaders: ['Content-Type', 'Accept']
+}));
 app.use(express.json());
 
 // Check for required environment variables
