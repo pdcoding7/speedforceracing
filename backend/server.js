@@ -29,6 +29,20 @@ const auth = new google.auth.GoogleAuth({
   scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
 });
 
+// Add authentication test
+auth.getClient()
+  .then(client => {
+    console.log('Successfully authenticated with Google');
+  })
+  .catch(err => {
+    console.error('Authentication error:', {
+      message: err.message,
+      code: err.code,
+      status: err.status,
+      errors: err.errors
+    });
+  });
+
 const sheets = google.sheets({ version: 'v4', auth });
 
 // API endpoint to fetch data from Google Sheets
@@ -39,8 +53,22 @@ app.get('/api/sheets-data', async (req, res) => {
       hasClientEmail: !!process.env.GOOGLE_CLIENT_EMAIL,
       hasPrivateKey: !!process.env.GOOGLE_PRIVATE_KEY,
       hasSpreadsheetId: !!process.env.SPREADSHEET_ID,
-      spreadsheetId: process.env.SPREADSHEET_ID
+      spreadsheetId: process.env.SPREADSHEET_ID,
+      clientEmail: process.env.GOOGLE_CLIENT_EMAIL
     });
+
+    // Test authentication before making the request
+    try {
+      await auth.getClient();
+      console.log('Authentication successful before making request');
+    } catch (authError) {
+      console.error('Authentication failed before making request:', {
+        message: authError.message,
+        code: authError.code,
+        status: authError.status
+      });
+      throw authError;
+    }
 
     const sheets = google.sheets({ version: 'v4', auth });
     
