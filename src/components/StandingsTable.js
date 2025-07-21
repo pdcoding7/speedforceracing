@@ -359,7 +359,7 @@ const StandingsTable = () => {
         const div2TeamData = data.slice(50, 60); // Next 10 rows for Div 2 team standings
         
         // Split the data into driver and team standings for Div 3
-        const div3DriverData = data.slice(60, 80); // Next 20 rows for Div 3 driver standings
+        const div3DriverData = data.slice(60, 80);
         const div3TeamData = data.slice(80, 90); // Next 10 rows for Div 3 team standings
         
         // Split the data into driver and team standings for Div 4
@@ -384,20 +384,6 @@ const StandingsTable = () => {
 
     fetchStandings();
   }, []);
-
-  if (loading) {
-    return (
-      <LoadingSpinner>
-        <Spinner animation="border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-      </LoadingSpinner>
-    );
-  }
-
-  if (error) {
-    return <ErrorMessage>Error: {error}</ErrorMessage>;
-  }
 
   const renderDiv1Standings = () => (
     <>
@@ -765,56 +751,69 @@ const StandingsTable = () => {
     );
   };
 
+  // Always render the section, title, and background
   return (
-    <section className="section" id="standings">
-      <SectionTitle sectionTitle="Standings"></SectionTitle>
-      
-      <TabsContainer>
-        <TabRow>
-          <Tab 
-            active={activeTab === 1} 
-            onClick={() => setActiveTab(1)}
-          >
-            Division 1
-          </Tab>
-          <Tab 
-            active={activeTab === 2} 
-            onClick={() => setActiveTab(2)}
-          >
-            Division 2
-          </Tab>
-        </TabRow>
-        <TabRow>
-          <Tab 
-            active={activeTab === 3} 
-            onClick={() => setActiveTab(3)}
-          >
-            Division 3
-          </Tab>
-          <Tab 
-            active={activeTab === 4} 
-            onClick={() => setActiveTab(4)}
-          >
-            Division 4
-          </Tab>
-        </TabRow>
-      </TabsContainer>
+    <section className="section" id="standings" style={{ backgroundColor: '#000', minHeight: '400px' }}>
+      <SectionTitle sectionTitle="Standings" />
+      {/* Show loading spinner or error if needed, else show tabs and tables */}
+      {loading ? (
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '200px' }}>
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+        </div>
+      ) : error ? (
+        <ErrorMessage>Error: {error}</ErrorMessage>
+      ) : (
+        <>
+          <TabsContainer>
+            <TabRow>
+              <Tab 
+                active={activeTab === 1} 
+                onClick={() => setActiveTab(1)}
+              >
+                Division 1
+              </Tab>
+              <Tab 
+                active={activeTab === 2} 
+                onClick={() => setActiveTab(2)}
+              >
+                Division 2
+              </Tab>
+            </TabRow>
+            <TabRow>
+              <Tab 
+                active={activeTab === 3} 
+                onClick={() => setActiveTab(3)}
+              >
+                Division 3
+              </Tab>
+              <Tab 
+                active={activeTab === 4} 
+                onClick={() => setActiveTab(4)}
+              >
+                Division 4
+              </Tab>
+            </TabRow>
+          </TabsContainer>
 
-      <TabContent active={activeTab === 1}>
-        {renderDiv1Standings()}
-      </TabContent>
+          <TabContent active={activeTab === 1}>
+            {renderDiv1Standings()}
+          </TabContent>
 
-      <TabContent active={activeTab === 2}>
-        {renderDiv2Standings()}
-      </TabContent>
+          <TabContent active={activeTab === 2}>
+            {renderDiv2Standings()}
+          </TabContent>
 
-      <TabContent active={activeTab === 3}>
-        {renderDiv3Standings()}
-      </TabContent>
+          <TabContent active={activeTab === 3}>
+            {renderDiv3Standings()}
+          </TabContent>
 
-      <TabContent active={activeTab === 4}>
-        {renderDiv4Standings()}
-      </TabContent>
+          <TabContent active={activeTab === 4}>
+            {renderDiv4Standings()}
+          </TabContent>
+        </>
+      )}
     </section>
   );
 };
