@@ -757,7 +757,7 @@ const StandingsTable = () => {
       <SectionTitle sectionTitle="Standings" />
       {/* Show loading spinner or error if needed, else show tabs and tables */}
       {loading ? (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '200px' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '200px', color:'#fff' }}>
           <Spinner animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
           </Spinner>
