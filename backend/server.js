@@ -197,19 +197,19 @@ app.get('/api/sheets-data', async (req, res) => {
     }));
 
     // Combine the driver data for Div 4
-    const div4DriverData = div4DriverValues.map((row, index) => {
-      const teamName = div4Teams[index] ? div4Teams[index][0] : '';
-      return {
-        ...row,
-        team: teamName
-      };
-    });
+    // const div4DriverData = div4DriverValues.map((row, index) => {
+    //   const teamName = div4Teams[index] ? div4Teams[index][0] : '';
+    //   return {
+    //     ...row,
+    //     team: teamName
+    //   };
+    // });
 
     // Combine the team data for Div 4
-    const div4TeamData = div4TeamValues.map(row => ({
-      ...row,
-      team: row[0]
-    }));
+    // const div4TeamData = div4TeamValues.map(row => ({
+    //   ...row,
+    //   team: row[0]
+    // }));
 
     // Combine all datasets in the correct order
     const combinedData = [
@@ -219,8 +219,8 @@ app.get('/api/sheets-data', async (req, res) => {
       ...div2TeamData,    // Next rows: Div 2 team standings
       ...div3DriverData,  // Next 20 rows: Div 3 driver standings
       ...div3TeamData,    // Next rows: Div 3 team standings
-      ...div4DriverData,  // Next 20 rows: Div 4 driver standings
-      ...div4TeamData     // Last rows: Div 4 team standings
+      // ...div4DriverData,  // Next 20 rows: Div 4 driver standings
+      // ...div4TeamData     // Last rows: Div 4 team standings
     ];
 
     console.log('First few rows of combined data:', combinedData.slice(0, 3));
