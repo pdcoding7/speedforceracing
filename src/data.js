@@ -177,18 +177,18 @@ export const gp1Slider = [
 export const streamConfig = [
 	{
 		id: 1,
-		src: "https://www.youtube.com/embed/zqQXKq9ANcQ",
-		title: "Div 1 - Rnd 17 - Silverstone",
+		src: "https://www.youtube.com/embed/RFEJFEkk2cw",
+		title: "Div 1 - Rnd 1 - Belgium",
 	},
 	{
 		id: 2,
-		src: "https://www.youtube.com/embed/680hsXC8WEY",
-		title: "Div 2 - Rnd 17 - Silverstone",
+		src: "https://www.youtube.com/embed/4--YPDsDhG0",
+		title: "Div 2 - Rnd 1 - Belgium",
 	},
 	{
 		id: 3,
-		src: "https://www.youtube.com/embed/FTBV1kMsezU",
-		title: "Div 3 - Rnd 17 - Silverstone",
+		src: "https://www.youtube.com/embed/q5jH9_9i_Ew",
+		title: "Div 3 - Rnd 1 - Belgium",
 	},
 	// {
 	// 	id: 4,
