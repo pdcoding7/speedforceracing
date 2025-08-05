@@ -780,20 +780,12 @@ const StandingsTable = () => {
               >
                 Division 2
               </Tab>
-            </TabRow>
-            <TabRow>
               <Tab 
                 active={activeTab === 3} 
                 onClick={() => setActiveTab(3)}
               >
                 Division 3
               </Tab>
-              {/* <Tab 
-                active={activeTab === 4} 
-                onClick={() => setActiveTab(4)}
-              >
-                Division 4
-              </Tab> */}
             </TabRow>
           </TabsContainer>
 
