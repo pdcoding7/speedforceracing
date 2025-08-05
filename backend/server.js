@@ -95,8 +95,7 @@ app.get('/api/sheets-data', async (req, res) => {
     // Fetch both driver and team standings data for Div 1, Div 2, Div 3, and Div 4
     const [div1DriverValuesResponse, div1TeamValuesResponse, div1TeamResponse, 
           div2DriverValuesResponse, div2TeamValuesResponse, div2TeamResponse,
-          div3DriverValuesResponse, div3TeamValuesResponse, div3TeamResponse,
-          div4DriverValuesResponse, div4TeamValuesResponse, div4TeamResponse] = await Promise.all([
+          div3DriverValuesResponse, div3TeamValuesResponse, div3TeamResponse,] = await Promise.all([
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
         range: 'Div 1!C7:H26',
@@ -133,18 +132,6 @@ app.get('/api/sheets-data', async (req, res) => {
         spreadsheetId: process.env.SPREADSHEET_ID,
         range: 'Div 3!AC7:AC26',
       }),
-      sheets.spreadsheets.values.get({
-        spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 4!C7:H26',
-      }),
-      sheets.spreadsheets.values.get({
-        spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 4!A29:F38',
-      }),
-      sheets.spreadsheets.values.get({
-        spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 4!AC7:AC26',
-      })
     ]);
 
     const div1DriverValues = div1DriverValuesResponse.data.values || [];
@@ -156,9 +143,6 @@ app.get('/api/sheets-data', async (req, res) => {
     const div3DriverValues = div3DriverValuesResponse.data.values || [];
     const div3TeamValues = div3TeamValuesResponse.data.values || [];
     const div3Teams = div3TeamResponse.data.values || [];
-    const div4DriverValues = div4DriverValuesResponse.data.values || [];
-    const div4TeamValues = div4TeamValuesResponse.data.values || [];
-    const div4Teams = div4TeamResponse.data.values || [];
 
     // Combine the driver data for Div 1
     const div1DriverData = div1DriverValues.map((row, index) => {
@@ -205,21 +189,6 @@ app.get('/api/sheets-data', async (req, res) => {
       team: row[0]
     }));
 
-    // Combine the driver data for Div 4
-    // const div4DriverData = div4DriverValues.map((row, index) => {
-    //   const teamName = div4Teams[index] ? div4Teams[index][0] : '';
-    //   return {
-    //     ...row,
-    //     team: teamName
-    //   };
-    // });
-
-    // Combine the team data for Div 4
-    // const div4TeamData = div4TeamValues.map(row => ({
-    //   ...row,
-    //   team: row[0]
-    // }));
-
     // Combine all datasets in the correct order
     const combinedData = [
       ...div1DriverData,  // First 20 rows: Div 1 driver standings
@@ -228,8 +197,6 @@ app.get('/api/sheets-data', async (req, res) => {
       ...div2TeamData,    // Next rows: Div 2 team standings
       ...div3DriverData,  // Next 20 rows: Div 3 driver standings
       ...div3TeamData,    // Next rows: Div 3 team standings
-      // ...div4DriverData,  // Next 20 rows: Div 4 driver standings
-      // ...div4TeamData     // Last rows: Div 4 team standings
     ];
 
     console.log('First few rows of combined data:', combinedData.slice(0, 3));
