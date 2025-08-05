@@ -98,7 +98,7 @@ app.get('/api/sheets-data', async (req, res) => {
       }),
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 1!AA7:AA26',
+        range: 'Div 1!AC7:AC26',
       }),
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
@@ -110,7 +110,7 @@ app.get('/api/sheets-data', async (req, res) => {
       }),
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 2!AA7:AA26',
+        range: 'Div 2!AC7:AC26',
       }),
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
@@ -122,7 +122,7 @@ app.get('/api/sheets-data', async (req, res) => {
       }),
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 3!AA7:AA26',
+        range: 'Div 3!AC7:AC26',
       }),
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
@@ -134,7 +134,7 @@ app.get('/api/sheets-data', async (req, res) => {
       }),
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 4!AA7:AA26',
+        range: 'Div 4!AC7:AC26',
       })
     ]);
 
