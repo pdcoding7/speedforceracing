@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3001', 'https://www.speedforceracing.co.uk', 'https://speedforceracing.co.uk'],
+  origin: ['http://localhost:3000', 'http://localhost:3001', 'https://www.speedforceracing.co.uk', 'https://speedforceracing.co.uk', 'https://speedforceracing.netlify.app'],
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Accept'],
   credentials: true
@@ -49,6 +49,15 @@ auth.getClient()
   });
 
 const sheets = google.sheets({ version: 'v4', auth });
+
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || 'development'
+  });
+});
 
 // API endpoint to fetch data from Google Sheets
 app.get('/api/sheets-data', async (req, res) => {
