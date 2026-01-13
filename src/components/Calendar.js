@@ -1,7 +1,7 @@
 import CalendarComponent from "./CalendarComponent";
 import SectionTitle from "./SectionTitle";
-import styled from 'styled-components';
-import { useState } from 'react';
+import styled from "styled-components";
+import { useState } from "react";
 
 const TabsContainer = styled.div`
 	display: flex;
@@ -28,10 +28,10 @@ const Tab = styled.button`
 	padding: 1rem 2rem;
 	font-size: 1.2rem;
 	font-weight: 600;
-	color: ${props => props.active ? '#000' : 'rgba(0, 0, 0, 0.7)'};
+	color: ${(props) => (props.active ? "#000" : "rgba(0, 0, 0, 0.7)")};
 	background: none;
 	border: none;
-	border-bottom: 3px solid ${props => props.active ? '#000' : 'transparent'};
+	border-bottom: 3px solid ${(props) => (props.active ? "#000" : "transparent")};
 	cursor: pointer;
 	transition: all 0.3s ease;
 	margin: 0 0.5rem;
@@ -55,8 +55,8 @@ const Tab = styled.button`
 `;
 
 const TabContent = styled.div`
-	display: ${props => props.active ? 'block' : 'none'};
-	animation: ${props => props.active ? 'fadeIn 0.3s ease-in-out' : 'none'};
+	display: ${(props) => (props.active ? "block" : "none")};
+	animation: ${(props) => (props.active ? "fadeIn 0.3s ease-in-out" : "none")};
 
 	@keyframes fadeIn {
 		from {
@@ -76,40 +76,31 @@ const Calendar = () => {
 	return (
 		<section className="section" id="calendar">
 			<SectionTitle sectionTitle="Race Calendar"></SectionTitle>
-			
+
 			<TabsContainer>
 				<TabRow>
-					<Tab 
-						active={activeTab === 1} 
-						onClick={() => setActiveTab(1)}
-					>
+					<Tab active={activeTab === 1} onClick={() => setActiveTab(1)}>
 						Division 1
 					</Tab>
-					<Tab 
-						active={activeTab === 2} 
-						onClick={() => setActiveTab(2)}
-					>
+					<Tab active={activeTab === 2} onClick={() => setActiveTab(2)}>
 						Division 2
 					</Tab>
-					<Tab 
-						active={activeTab === 3} 
-						onClick={() => setActiveTab(3)}
-					>
+					<Tab active={activeTab === 3} onClick={() => setActiveTab(3)}>
 						Division 3
 					</Tab>
 				</TabRow>
 			</TabsContainer>
 
 			<TabContent active={activeTab === 1}>
-				<CalendarComponent src="/images/calender-div-1-s18.png" />
+				<CalendarComponent src="/images/calender-div-1-s19.png" />
 			</TabContent>
 
 			<TabContent active={activeTab === 2}>
-				<CalendarComponent src="/images/calender-div-2-s18.png" />
+				<CalendarComponent src="/images/calender-div-2-s19.png" />
 			</TabContent>
 
 			<TabContent active={activeTab === 3}>
-				<CalendarComponent src="/images/calender-div-3-s18.png" />
+				<CalendarComponent src="/images/calender-div-3-s19.png" />
 			</TabContent>
 
 			{/* <TabContent active={activeTab === 4}>
