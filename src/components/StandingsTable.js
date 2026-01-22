@@ -107,9 +107,7 @@ const DriverStandingsTable = styled(StyledTable)`
   th {
     @media (max-width: 755px) {
       &:nth-child(4),
-      &:nth-child(5),
-      &:nth-child(6),
-      &:nth-child(7) {
+      &:nth-child(5) {
         display: none;
       }
     }
@@ -118,9 +116,7 @@ const DriverStandingsTable = styled(StyledTable)`
   td {
     @media (max-width: 755px) {
       &:nth-child(4),
-      &:nth-child(5),
-      &:nth-child(6),
-      &:nth-child(7) {
+      &:nth-child(5) {
         display: none;
       }
     }
@@ -302,7 +298,7 @@ const getTeamImage = (teamName) => {
       return '/images/team-merc.png';
     case 'williams':
       return '/images/team-will.png';
-    case 'visa rb':
+    case 'racing bulls':
        return '/images/team-visa.png';
     case 'haas':
       return '/images/team-haas.png';
@@ -401,8 +397,6 @@ const StandingsTable = () => {
             <th>Team</th>
             <th>Wins</th>
             <th>Podiums</th>
-            <th>Poles</th>
-            <th>FL</th>
             <th>Points</th>
           </tr>
         </thead>
@@ -422,8 +416,6 @@ const StandingsTable = () => {
               </TeamCell>
               <WinsCell>{row[2] === '0' ? '' : row[2]}</WinsCell>
               <PodiumsCell>{row[3] === '0' ? '' : row[3]}</PodiumsCell>
-              <PolesCell>{row[5]}</PolesCell>
-              <FLCell>{row[4]}</FLCell>
               <PointsCell>{row[1]}</PointsCell>
             </tr>
           ))}
@@ -492,8 +484,6 @@ const StandingsTable = () => {
               <th>Team</th>
               <th>Wins</th>
               <th>Podiums</th>
-              <th>Poles</th>
-              <th>FL</th>
               <th>Points</th>
             </tr>
           </thead>
@@ -513,8 +503,6 @@ const StandingsTable = () => {
                 </TeamCell>
                 <WinsCell>{row[2] === '0' ? '' : row[2]}</WinsCell>
                 <PodiumsCell>{row[3] === '0' ? '' : row[3]}</PodiumsCell>
-                <PolesCell>{row[5]}</PolesCell>
-                <FLCell>{row[4]}</FLCell>
                 <PointsCell>{row[1]}</PointsCell>
               </tr>
             ))}
@@ -584,8 +572,6 @@ const StandingsTable = () => {
               <th>Team</th>
               <th>Wins</th>
               <th>Podiums</th>
-              <th>Poles</th>
-              <th>FL</th>
               <th>Points</th>
             </tr>
           </thead>
@@ -605,8 +591,6 @@ const StandingsTable = () => {
                 </TeamCell>
                 <WinsCell>{row[2] === '0' ? '' : row[2]}</WinsCell>
                 <PodiumsCell>{row[3] === '0' ? '' : row[3]}</PodiumsCell>
-                <PolesCell>{row[5]}</PolesCell>
-                <FLCell>{row[4]}</FLCell>
                 <PointsCell>{row[1]}</PointsCell>
               </tr>
             ))}
