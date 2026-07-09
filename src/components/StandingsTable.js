@@ -764,12 +764,6 @@ const StandingsTable = () => {
               >
                 Division 2
               </Tab>
-              <Tab 
-                active={activeTab === 3} 
-                onClick={() => setActiveTab(3)}
-              >
-                Division 3
-              </Tab>
             </TabRow>
           </TabsContainer>
 
