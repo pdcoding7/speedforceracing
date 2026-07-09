@@ -185,11 +185,11 @@ export const streamConfig = [
 		src: "https://www.youtube.com/embed/pJb08rn6AfE",
 		title: "Div 2 - Rnd 2 - Austria",
 	},
-	{
-		id: 3,
-		src: "https://www.youtube.com/embed/lQAqiLNbxC8",
-		title: "Div 3 - Rnd 2 - Austria",
-	},
+	// {
+	// 	id: 3,
+	// 	src: "https://www.youtube.com/embed/lQAqiLNbxC8",
+	// 	title: "Div 3 - Rnd 2 - Austria",
+	// },
 	// {
 	// 	id: 4,
 	// 	src: "https://www.youtube.com/embed/QueECO4yv7c",

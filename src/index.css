@@ -417,6 +417,10 @@ h2.sectionHeader {margin-bottom:0;}
 
   #calendar .calendarImg {margin:auto; width:30%; margin-bottom:2rem;}
 
+  @media screen and (max-width: 1500px) {
+    #calendar .calendarImg {margin:auto; width: 40%; margin-bottom:2rem;}
+    }
+
   @media screen and (max-width: 1000px) {
   #calendar .calendarImg {margin:auto; width: 80%; margin-bottom:2rem;}
   }

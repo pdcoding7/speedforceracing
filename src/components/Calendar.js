@@ -85,27 +85,17 @@ const Calendar = () => {
 					<Tab active={activeTab === 2} onClick={() => setActiveTab(2)}>
 						Division 2
 					</Tab>
-					<Tab active={activeTab === 3} onClick={() => setActiveTab(3)}>
-						Division 3
-					</Tab>
 				</TabRow>
 			</TabsContainer>
 
 			<TabContent active={activeTab === 1}>
-				<CalendarComponent src="/images/calender-div-1-s19.png" />
+				<CalendarComponent src="/images/calender-div-1-s20.png" />
 			</TabContent>
 
 			<TabContent active={activeTab === 2}>
-				<CalendarComponent src="/images/calender-div-2-s19.png" />
+				<CalendarComponent src="/images/calender-div-2-s20.png" />
 			</TabContent>
 
-			<TabContent active={activeTab === 3}>
-				<CalendarComponent src="/images/calender-div-3-s19.png" />
-			</TabContent>
-
-			{/* <TabContent active={activeTab === 4}>
-				<CalendarComponent src="/images/calender-div-4-s17.png" />
-			</TabContent> */}
 		</section>
 	);
 };
