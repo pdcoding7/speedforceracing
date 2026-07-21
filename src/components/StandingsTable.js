@@ -366,12 +366,12 @@ const StandingsTable = () => {
         const data = await response.json();
         
         // Split the data into driver and team standings for Div 1
-        const driverData = data.slice(0, 20); // First 20 rows for driver standings
-        const teamData = data.slice(20, 30); // Next 10 rows for team standings
+        const driverData = data.slice(0, 22); // First 20 rows for driver standings
+        const teamData = data.slice(22, 33); // Next 10 rows for team standings
         
         // Split the data into driver and team standings for Div 2
-        const div2DriverData = data.slice(30, 50); // Next 20 rows for Div 2 driver standings
-        const div2TeamData = data.slice(50, 60); // Next 10 rows for Div 2 team standings
+        const div2DriverData = data.slice(33, 55); // Next 20 rows for Div 2 driver standings
+        const div2TeamData = data.slice(55, 66); // Next 10 rows for Div 2 team standings
         
         // Split the data into driver and team standings for Div 3
         // const div3DriverData = data.slice(60, 80);
