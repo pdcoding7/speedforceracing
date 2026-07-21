@@ -52,8 +52,8 @@ const sheets = google.sheets({ version: 'v4', auth });
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
-  res.json({ 
-    status: 'ok', 
+  res.json({
+    status: 'ok',
     timestamp: new Date().toISOString(),
     environment: process.env.NODE_ENV || 'development'
   });
@@ -85,52 +85,76 @@ app.get('/api/sheets-data', async (req, res) => {
     }
 
     const sheets = google.sheets({ version: 'v4', auth });
-    
+
     // Get the sheet names
     const spreadsheet = await sheets.spreadsheets.get({
       spreadsheetId: process.env.SPREADSHEET_ID,
     });
     console.log('Available sheets:', spreadsheet.data.sheets.map(sheet => sheet.properties.title));
 
-    // Fetch both driver and team standings data for Div 1, Div 2, Div 3, and Div 4
-    const [div1DriverValuesResponse, div1TeamValuesResponse, div1TeamResponse, 
-          div2DriverValuesResponse, div2TeamValuesResponse, div2TeamResponse,
-          div3DriverValuesResponse, div3TeamValuesResponse, div3TeamResponse,] = await Promise.all([
+    // Fetch both driver and team standings data for Div 1, Div 2
+    const [
+      div1DriverValuesResponse,
+      div1TeamValuesResponse,
+      div1TeamResponse,
+
+      div2DriverValuesResponse,
+      div2TeamValuesResponse,
+      div2TeamResponse,
+
+    ] = await Promise.all([
+      // DIV 1 DRIVERS
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 1!C7:H26',
+        range: 'Div 1!C7:F26',
       }),
+
+      // DIV 1 CONSTRUCTORS
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 1!A29:F38',
+        range: 'Div 1!A31:F41',
       }),
+
+      // DIV 1 TEAM LOOKUP
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 1!AA7:AA26',
+        range: 'Div 1!U7:U26',
       }),
+
+      // DIV 2 DRIVERS
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 2!C7:H26',
+        range: 'Div 2!C7:F26',
       }),
+
+      // DIV 2 CONSTRUCTORS
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 2!A29:F38',
+        range: 'Div 2!A31:F41',
       }),
+
+      // DIV 2 TEAM LOOKUP
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 2!AA7:AA26',
+        range: 'Div 2!U7:U26',
       }),
+
+      // DIV 3 DRIVERS
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 3!C7:H26',
+        range: 'Div 3!C7:F26',
       }),
+
+      // DIV 3 CONSTRUCTORS
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 3!A29:F38',
+        range: 'Div 3!A31:F41',
       }),
+
+      // DIV 3 TEAM LOOKUP
       sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'Div 3!AA7:AA26',
+        range: 'Div 3!U7:U26',
       }),
     ]);
 
@@ -209,9 +233,9 @@ app.get('/api/sheets-data', async (req, res) => {
       status: error.status,
       errors: error.errors
     });
-    
+
     // Send more detailed error information
-    res.status(500).json({ 
+    res.status(500).json({
       error: 'Failed to fetch data',
       details: {
         message: error.message,

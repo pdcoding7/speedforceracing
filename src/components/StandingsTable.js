@@ -285,29 +285,48 @@ const TabContent = styled.div`
 
 const getTeamImage = (teamName) => {
   if (!teamName) return null;
-  
+
   const teamNameLower = teamName.toLowerCase().trim();
+
   switch (teamNameLower) {
     case 'alpine':
       return '/images/team-alp.png';
+
     case 'ferrari':
       return '/images/team-fer.png';
+
     case 'aston martin':
       return '/images/team-am.png';
+
     case 'mercedes':
       return '/images/team-merc.png';
+
     case 'williams':
       return '/images/team-will.png';
+
     case 'racing bulls':
-       return '/images/team-visa.png';
+      return '/images/team-visa.png';
+
     case 'haas':
       return '/images/team-haas.png';
+
     case 'redbull':
       return '/images/team-rb.png';
+
     case 'mclaren':
       return '/images/team-mcl.png';
+
     case 'kick sauber':
       return '/images/team-kick.png';
+
+    // New Season 20 teams
+
+    case 'audi':
+      return '/images/team-audi-new.png';
+
+    case 'cadillac':
+      return '/images/team-cadillac-new.png';
+
     default:
       return null;
   }
