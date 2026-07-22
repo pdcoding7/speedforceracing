@@ -198,12 +198,24 @@ const TeamCell = styled.td`
   background-color: white !important;
   width: 5.5rem;
   padding: 0.5rem;
+
   img {
     width: 100%;
     display: block;
     margin: 0 auto;
-    @media (max-width: 755px) {
+  }
+
+  img.large-team-logo {
+    width: 120%;
+  }
+
+  @media (max-width: 755px) {
+    img {
       width: 75%;
+    }
+
+    img.large-team-logo {
+      width: 90%;
     }
   }
 `;
@@ -285,7 +297,7 @@ const TabContent = styled.div`
 
 const getTeamImage = (teamName) => {
   if (!teamName) return null;
-  
+
   const teamNameLower = teamName.toLowerCase().trim();
   switch (teamNameLower) {
     case 'alpine':
@@ -299,7 +311,7 @@ const getTeamImage = (teamName) => {
     case 'williams':
       return '/images/team-will.png';
     case 'racing bulls':
-       return '/images/team-visa.png';
+      return '/images/team-visa.png';
     case 'haas':
       return '/images/team-haas.png';
     case 'redbull':
@@ -338,30 +350,30 @@ const StandingsTable = () => {
           },
           mode: 'cors',
         });
-        
+
         if (!response.ok) {
           const errorData = await response.json().catch(() => ({}));
           throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
         }
-        
+
         const data = await response.json();
-        
+
         // Split the data into driver and team standings for Div 1
         const driverData = data.slice(0, 20); // First 20 rows for driver standings
         const teamData = data.slice(20, 30); // Next 10 rows for team standings
-        
+
         // Split the data into driver and team standings for Div 2
         const div2DriverData = data.slice(30, 50); // Next 20 rows for Div 2 driver standings
         const div2TeamData = data.slice(50, 60); // Next 10 rows for Div 2 team standings
-        
+
         // Split the data into driver and team standings for Div 3
         // const div3DriverData = data.slice(60, 80);
         // const div3TeamData = data.slice(80, 90); // Next 10 rows for Div 3 team standings
-        
+
         // Split the data into driver and team standings for Div 4
         // const div4DriverData = data.slice(90, 110); // Next 20 rows for Div 4 driver standings
         // const div4TeamData = data.slice(110, 120); // Next 10 rows for Div 4 team standings
-        
+
         setStandings(driverData);
         setTeamStandings(teamData);
         setDiv2Standings(div2DriverData);
@@ -388,9 +400,9 @@ const StandingsTable = () => {
         <thead>
           <tr>
             <th>
-              <img 
-                src="/images/sftlogo-2white.png" 
-                alt="SFR Logo" 
+              <img
+                src="/images/sftlogo-2white.png"
+                alt="SFR Logo"
               />
             </th>
             <th>Driver</th>
@@ -407,9 +419,15 @@ const StandingsTable = () => {
               <DriverCell>{row[0]}</DriverCell>
               <TeamCell>
                 {getTeamImage(row.team) && (
-                  <img 
-                    src={getTeamImage(row.team)} 
-                    alt={row.team} 
+                  <img
+                    className={
+                      row.team?.toLowerCase() === 'audi' ||
+                        row.team?.toLowerCase() === 'cadillac'
+                        ? 'large-team-logo'
+                        : ''
+                    }
+                    src={getTeamImage(row.team)}
+                    alt={row.team}
                     title={row.team}
                   />
                 )}
@@ -427,9 +445,9 @@ const StandingsTable = () => {
         <thead>
           <tr>
             <th>
-              <img 
-                src="/images/sftlogo-2white.png" 
-                alt="SFR Logo" 
+              <img
+                src="/images/sftlogo-2white.png"
+                alt="SFR Logo"
               />
             </th>
             <th>Team</th>
@@ -445,9 +463,15 @@ const StandingsTable = () => {
                 <PositionCell>{rowIndex + 1}</PositionCell>
                 <TeamCell>
                   {getTeamImage(row[2]) && (
-                    <img 
-                      src={getTeamImage(row[2])} 
-                      alt={row[2]} 
+                    <img
+                      className={
+                        row[2]?.toLowerCase() === 'audi' ||
+                          row[2]?.toLowerCase() === 'cadillac'
+                          ? 'large-team-logo'
+                          : ''
+                      }
+                      src={getTeamImage(row[2])}
+                      alt={row[2]}
                       title={row[2]}
                     />
                   )}
@@ -475,9 +499,9 @@ const StandingsTable = () => {
           <thead>
             <tr>
               <th>
-                <img 
-                  src="/images/sftlogo-2white.png" 
-                  alt="SFR Logo" 
+                <img
+                  src="/images/sftlogo-2white.png"
+                  alt="SFR Logo"
                 />
               </th>
               <th>Driver</th>
@@ -494,9 +518,15 @@ const StandingsTable = () => {
                 <DriverCell>{row[0]}</DriverCell>
                 <TeamCell>
                   {getTeamImage(row.team) && (
-                    <img 
-                      src={getTeamImage(row.team)} 
-                      alt={row.team} 
+                    <img
+                      className={
+                        row.team?.toLowerCase() === 'audi' ||
+                          row.team?.toLowerCase() === 'cadillac'
+                          ? 'large-team-logo'
+                          : ''
+                      }
+                      src={getTeamImage(row.team)}
+                      alt={row.team}
                       title={row.team}
                     />
                   )}
@@ -514,9 +544,9 @@ const StandingsTable = () => {
           <thead>
             <tr>
               <th>
-                <img 
-                  src="/images/sftlogo-2white.png" 
-                  alt="SFR Logo" 
+                <img
+                  src="/images/sftlogo-2white.png"
+                  alt="SFR Logo"
                 />
               </th>
               <th>Team</th>
@@ -532,11 +562,18 @@ const StandingsTable = () => {
                   <PositionCell>{rowIndex + 1}</PositionCell>
                   <TeamCell>
                     {getTeamImage(row[2]) && (
-                      <img 
-                        src={getTeamImage(row[2])} 
-                        alt={row[2]} 
+                      <img
+                        className={
+                          row[2]?.toLowerCase() === 'audi' ||
+                            row[2]?.toLowerCase() === 'cadillac'
+                            ? 'large-team-logo'
+                            : ''
+                        }
+                        src={getTeamImage(row[2])}
+                        alt={row[2]}
                         title={row[2]}
                       />
+
                     )}
                   </TeamCell>
                   <WinsCell>{row[4]}</WinsCell>
@@ -741,7 +778,7 @@ const StandingsTable = () => {
       <SectionTitle sectionTitle="Standings" />
       {/* Show loading spinner or error if needed, else show tabs and tables */}
       {loading ? (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '200px', color:'#fff' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '200px', color: '#fff' }}>
           <Spinner animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
           </Spinner>
@@ -752,14 +789,14 @@ const StandingsTable = () => {
         <>
           <TabsContainer>
             <TabRow>
-              <Tab 
-                active={activeTab === 1} 
+              <Tab
+                active={activeTab === 1}
                 onClick={() => setActiveTab(1)}
               >
                 Division 1
               </Tab>
-              <Tab 
-                active={activeTab === 2} 
+              <Tab
+                active={activeTab === 2}
                 onClick={() => setActiveTab(2)}
               >
                 Division 2
