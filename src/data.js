@@ -170,7 +170,7 @@ export const gp1Slider = [
 	{
 		id: 4,
 		imgPath: "/images/oliver-spa-4.png",
-		desc: "The Haas of 5STR-OliverWRC lining up at overtake on the unsuspecting Ferrari",
+		desc: "The Haas of 5STR-OliverWRC lining up an overtake on the unsuspecting Ferrari",
 	},
 ];
 
