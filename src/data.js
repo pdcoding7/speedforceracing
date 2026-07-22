@@ -155,7 +155,7 @@ export const gp1Slider = [
 	{
 		id: 1,
 		imgPath: "/images/oliver-spa-3.png",
-		desc: "Divison 2 tackling the famous Eau Rouge at Spa in Round 2",
+		desc: "Division 2 tackling the famous Eau Rouge at Spa in Round 2",
 	},
 	{
 		id: 2,
