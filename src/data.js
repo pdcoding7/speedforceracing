@@ -154,36 +154,36 @@ export const hofConfig = [
 export const gp1Slider = [
 	{
 		id: 1,
-		imgPath: "/images/img-vicar-new.jpg",
-		desc: "SFR_thevicar finds himself in a Haas sandwhich as he works his way through the field for P4 in Japan",
+		imgPath: "/images/oliver-spa-3.png",
+		desc: "Divison 2 tackling the famous Eau Rouge at Spa in Round 2",
 	},
 	{
 		id: 2,
-		imgPath: "/images/lights-out.jpg",
-		desc: "And it's lights out and away we go at Bahrain for the opening race of Season 14!",
+		imgPath: "/images/oliver-spa-2.png",
+		desc: "The Haas of 5STR-OliverWRC charging through the field in Round 2 at Spa",
 	},
 	{
 		id: 3,
-		imgPath: "/images/kierannn.jpg",
-		desc: "The McLaren of Kierannnn_88 in the lead of the Bahrain GP, with his teammate in tow - Bahrain Rnd 1",
+		imgPath: "/images/oliver-spa-1.png",
+		desc: "Some close battles down the straight at Spa in Division 2",
 	},
 	{
 		id: 4,
-		imgPath: "/images/alpha-line.jpg",
-		desc: "RogueSmithy dragging his car home as he runs out of fuel - Bahrain Rnd 1",
+		imgPath: "/images/oliver-spa-4.png",
+		desc: "The Haas of 5STR-OliverWRC lining up at overtake on the unsuspecting Ferrari",
 	},
 ];
 
 export const streamConfig = [
 	{
 		id: 1,
-		src: "https://www.youtube.com/embed/KHmNkC6n7Wg",
-		title: "Div 1 - Rnd 2 - Austria",
+		src: "https://www.youtube.com/embed/_1AUINI38gM?si=00CRD1eORMjxJ2ty",
+		title: "Div 1 - Rnd 2 - Belgium",
 	},
 	{
 		id: 2,
-		src: "https://www.youtube.com/embed/pJb08rn6AfE",
-		title: "Div 2 - Rnd 2 - Austria",
+		src: "https://www.youtube.com/embed/Vu9lZ810cbY?si=9sBRXH3V3G-E1K7m",
+		title: "Div 2 - Rnd 1 - Bahrain",
 	},
 	// {
 	// 	id: 3,
