@@ -315,11 +315,16 @@ const getTeamImage = (teamName) => {
     case 'haas':
       return '/images/team-haas.png';
     case 'redbull':
+    case 'red bull':
       return '/images/team-rb.png';
     case 'mclaren':
       return '/images/team-mcl.png';
     case 'kick sauber':
       return '/images/team-kick.png';
+    case 'cadillac':
+      return '/images/team-cadillac-new.png';
+    case 'audi':
+      return '/images/team-audi-new.png';
     default:
       return null;
   }
@@ -330,10 +335,6 @@ const StandingsTable = () => {
   const [teamStandings, setTeamStandings] = useState([]);
   const [div2Standings, setDiv2Standings] = useState([]);
   const [div2TeamStandings, setDiv2TeamStandings] = useState([]);
-  // const [div3Standings, setDiv3Standings] = useState([]);
-  // const [div3TeamStandings, setDiv3TeamStandings] = useState([]);
-  // const [div4Standings, setDiv4Standings] = useState([]);
-  // const [div4TeamStandings, setDiv4TeamStandings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeTab, setActiveTab] = useState(1);
@@ -359,29 +360,17 @@ const StandingsTable = () => {
         const data = await response.json();
 
         // Split the data into driver and team standings for Div 1
-        const driverData = data.slice(0, 20); // First 20 rows for driver standings
-        const teamData = data.slice(20, 30); // Next 10 rows for team standings
-
+        const driverData = data.slice(0, 22); // First 22 rows for driver standings
+        const teamData = data.slice(22, 33); // Next 11 rows for team standings
+        
         // Split the data into driver and team standings for Div 2
-        const div2DriverData = data.slice(30, 50); // Next 20 rows for Div 2 driver standings
-        const div2TeamData = data.slice(50, 60); // Next 10 rows for Div 2 team standings
-
-        // Split the data into driver and team standings for Div 3
-        // const div3DriverData = data.slice(60, 80);
-        // const div3TeamData = data.slice(80, 90); // Next 10 rows for Div 3 team standings
-
-        // Split the data into driver and team standings for Div 4
-        // const div4DriverData = data.slice(90, 110); // Next 20 rows for Div 4 driver standings
-        // const div4TeamData = data.slice(110, 120); // Next 10 rows for Div 4 team standings
-
+        const div2DriverData = data.slice(33, 55); // Next 22 rows for Div 2 driver standings
+        const div2TeamData = data.slice(55, 66); // Next 11 rows for Div 2 team standings
+              
         setStandings(driverData);
         setTeamStandings(teamData);
         setDiv2Standings(div2DriverData);
         setDiv2TeamStandings(div2TeamData);
-        // setDiv3Standings(div3DriverData);
-        // setDiv3TeamStandings(div3TeamData);
-        // setDiv4Standings(div4DriverData);
-        // setDiv4TeamStandings(div4TeamData);
         setLoading(false);
       } catch (err) {
         console.error('Fetch error:', err);
@@ -811,14 +800,6 @@ const StandingsTable = () => {
           <TabContent active={activeTab === 2}>
             {renderDiv2Standings()}
           </TabContent>
-
-          {/* <TabContent active={activeTab === 3}>
-            {renderDiv3Standings()}
-          </TabContent> */}
-
-          {/* <TabContent active={activeTab === 4}>
-            {renderDiv4Standings()}
-          </TabContent> */}
         </>
       )}
     </section>
