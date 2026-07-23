@@ -160,7 +160,7 @@ export const gp1Slider = [
 	{
 		id: 2,
 		imgPath: "/images/oliver-spa-2.png",
-		desc: "The Haas of 5STR-OliverWRC charging through the field in Round 2 at Spa",
+		desc: "The Ferrari of 5STR-OliverWRC charging through the field in Round 2 at Spa",
 	},
 	{
 		id: 3,
@@ -170,7 +170,7 @@ export const gp1Slider = [
 	{
 		id: 4,
 		imgPath: "/images/oliver-spa-4.png",
-		desc: "The Haas of 5STR-OliverWRC lining up an overtake on the unsuspecting Ferrari",
+		desc: "The Ferrari of 5STR-OliverWRC lining up an overtake on the unsuspecting Haas",
 	},
 ];
 
