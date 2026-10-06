@@ -102,8 +102,8 @@ p {
   scroll-margin-top: 4rem;
   border-bottom: 0.2rem solid var(--clr-white);
 }
-.section:nth-child(even) {background-color:#000;}
-.section:nth-child(odd) {background-color:#fff;}
+.section:nth-child(odd) {background-color:#000;}
+.section:nth-child(even) {background-color:#fff;}
 
 .section-title span {
   color: var(--clr-white);
@@ -415,7 +415,13 @@ h2.sectionHeader {margin-bottom:0;}
   #calendar .sectionDiv > :nth-child(3) {  background: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%) 50% /
     20px 20px;}
 
-  #calendar .calendarImg {margin:auto; width:30%; margin-bottom:2rem;}
+  #calendar .calendarImg {margin:auto; width:40%; margin-bottom:2rem;}
+
+  #intro .calendarImg {margin:auto; width:30%;}
+
+  @media screen and (max-width: 900px) {
+  #intro .calendarImg {margin:auto; width:100%;}
+  }
 
   @media screen and (max-width: 1500px) {
     #calendar .calendarImg {margin:auto; width: 40%; margin-bottom:2rem;}

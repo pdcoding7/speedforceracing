@@ -89,11 +89,11 @@ const Calendar = () => {
 			</TabsContainer>
 
 			<TabContent active={activeTab === 1}>
-				<CalendarComponent src="/images/calender-div-1-s20.png" />
+				<CalendarComponent src="/images/div-1-cal.png" />
 			</TabContent>
 
 			<TabContent active={activeTab === 2}>
-				<CalendarComponent src="/images/calender-div-2-s20.png" />
+				<CalendarComponent src="/images/div-2-cal.png" />
 			</TabContent>
 
 		</section>
